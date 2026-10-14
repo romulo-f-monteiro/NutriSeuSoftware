@@ -29,12 +29,6 @@
                             600: '#059669',
                             700: '#047857',
                             900: '#064e3b',
-                        },
-                        dark: {
-                            900: '#090a0f',
-                            800: '#12141c',
-                            700: '#1e2230',
-                            600: '#2b3044'
                         }
                     },
                     fontFamily: {
@@ -54,12 +48,9 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #090a0f;
-            color: #f3f4f6;
+            background-color: #f9fafb;
+            color: #1e293b;
             overflow-x: hidden;
-        }
-        .text-glow {
-            text-shadow: 0 0 40px rgba(16, 185, 129, 0.2);
         }
         /* Custom Smooth Transitions */
         .color-transition {
@@ -79,13 +70,13 @@
 <body class="antialiased selection:bg-brand-500 selection:text-white">
 
     <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-50 backdrop-blur-lg bg-dark-900/80 border-b border-white/5">
+    <header class="sticky top-0 z-50 backdrop-blur-lg bg-white/80 border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <div class="shrink-0">
                     <svg class="w-11 h-11" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="40" stroke="url(#multicolorGradient)" stroke-width="8" stroke-linecap="round"/>
-                        <text x="50%" y="64%" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif">R</text>
+                        <text x="50%" y="64%" font-size="38" font-weight="900" fill="#1e293b" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif">R</text>
                         <defs>
                             <linearGradient id="multicolorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#10b981" />
@@ -98,54 +89,52 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="text-white font-black text-xl tracking-tight block leading-none">NutriSuaMarca</span>
+                    <span class="text-gray-900 font-black text-xl tracking-tight block leading-none">NutriSuaMarca</span>
                 </div>
             </div>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                <a href="#beneficios" class="hover:text-brand-500 transition-colors">Vantagens</a>
-                <a href="#funcionalidades" class="hover:text-brand-500 transition-colors">Funcionalidades</a>
-                <a href="#testar" class="hover:text-brand-500 transition-colors">Testar Sistema</a>
-                <a href="#comparativo" class="hover:text-brand-500 transition-colors">Comparativo</a>
-                <a href="#faq" class="hover:text-brand-500 transition-colors">FAQ</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#testar" class="hover:text-brand-600 transition-colors">Testar Sistema</a>
+                <a href="#comparativo" class="hover:text-brand-600 transition-colors">Comparativo</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">FAQ</a>
             </nav>
             <div class="flex items-center gap-4">
-                <button onclick="openPixModal()" class="bg-brand-500 hover:bg-brand-600 text-dark-900 text-sm font-bold py-2.5 px-5 rounded-xl transition-all shadow-lg shadow-brand-500/25">Eu Quero! </button>
+                <button onclick="openPixModal()" class="bg-brand-500 hover:bg-brand-600 text-white text-sm font-bold py-2.5 px-5 rounded-xl transition-all shadow-lg shadow-brand-500/25">Eu Quero! </button>
             </div>
         </div>
     </header>
 
     <!-- SECTION 1: HERO -->
-    <section class="relative pt-12 pb-20 md:py-24 overflow-hidden border-b border-white/5">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-900/20 via-transparent to-transparent pointer-events-none"></div>
+    <section class="relative pt-12 pb-20 md:py-24 overflow-hidden border-b border-gray-200">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-500/10 via-transparent to-transparent pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                 
                 <!-- Hero Left Copywriting -->
                 <div class="lg:col-span-7 text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 font-semibold text-xs mb-6 uppercase tracking-wider animate-pulse">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-600 font-semibold text-xs mb-6 uppercase tracking-wider animate-pulse">
                         🔥 Projeto Exclusivo Limitado
                     </div>
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6 tracking-tight">
-                        O <span class="bg-gradient-to-r from-brand-500 to-emerald-300 bg-clip-text text-transparent">Software</span> que leva o seu nome, sua marca e sua identidade.
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tight">
+                        O <span class="bg-gradient-to-r from-brand-500 to-emerald-500 bg-clip-text text-transparent">Software</span> que leva o seu nome, sua marca e sua identidade.
                     </h1>
                     
-                    <p class="text-lg sm:text-xl text-gray-300 mb-8 font-light leading-relaxed">
-                        Desenvolvido por nutricionista, pensado exclusivamente para nutricionistas. Tenha um <strong class="font-semibold text-white">aplicativo personalizado</strong> totalmente adaptado ao seu nome e suas cores, sem nenhuma mensalidade ou anuidade.
+                    <p class="text-lg sm:text-xl text-gray-600 mb-8 font-light leading-relaxed">
+                        Desenvolvido por nutricionista, pensado exclusivamente para nutricionistas. Tenha um <strong class="font-semibold text-gray-900">aplicativo personalizado</strong> totalmente adaptado ao seu nome e suas cores, sem nenhuma mensalidade ou anuidade.
                     </p>
 
                     <!-- Benefícios Rápidos Hero -->
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8 text-sm">
-                        <div class="flex items-center gap-2 text-gray-300">
+                        <div class="flex items-center gap-2 text-gray-700">
                             <span class="w-2 h-2 rounded-full bg-brand-500 shadow-glow"></span>
                             Ecossistema Vitalício
                         </div>
-                        <div class="flex items-center gap-2 text-gray-300">
+                        <div class="flex items-center gap-2 text-gray-700">
                             <span class="w-2 h-2 rounded-full bg-brand-500 shadow-glow"></span>
                             Sua Cor, Seu Nome
                         </div>
-                        <div class="flex items-center gap-2 text-gray-300">
+                        <div class="flex items-center gap-2 text-gray-700">
                             <span class="w-2 h-2 rounded-full bg-brand-500 shadow-glow"></span>
                             Pagamento Único
                         </div>
@@ -153,10 +142,10 @@
 
                     <!-- CTA Principal -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 max-w-2xl">
-                        <button onclick="openPixModal()" class="flex-1 text-center bg-brand-500 hover:bg-brand-600 text-dark-900 font-extrabold py-4 px-6 rounded-2xl transition-all shadow-lg shadow-brand-500/20 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap">
+                        <button onclick="openPixModal()" class="flex-1 text-center bg-brand-500 hover:bg-brand-600 text-white font-extrabold py-4 px-6 rounded-2xl transition-all shadow-lg shadow-brand-500/20 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap">
                             Quero meu Aplicativo
                         </button>
-                        <a href="#testar" class="flex-1 text-center border border-white/10 hover:bg-white/5 text-white font-semibold py-4 px-6 rounded-2xl transition-all whitespace-nowrap">
+                        <a href="#testar" class="flex-1 text-center border border-gray-300 hover:bg-gray-100 text-gray-700 font-semibold py-4 px-6 rounded-2xl transition-all whitespace-nowrap">
                             Testar Sistema
                         </a>
                     </div>
@@ -165,23 +154,23 @@
                 <!-- Hero Right Interactive Mockup Customizer -->
                 <div class="lg:col-span-5 flex flex-col items-center">
                     <div class="text-center mb-4">
-                        <span class="text-xs text-gray-400 uppercase tracking-widest block mb-2">Simulador Interativo</span>
-                        <p class="text-sm text-gray-300">Escolha a cor da sua clínica para ver a mágica:</p>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest block mb-2">Simulador Interativo</span>
+                        <p class="text-sm text-gray-600">Escolha a cor da sua clínica para ver a mágica:</p>
                         
                         <div class="flex justify-center gap-3 mt-3">
-                            <button onclick="changeMockupColor('emerald', '#10b981')" class="w-8 h-8 rounded-full bg-emerald-500 border-2 border-white/20 focus:border-white transition-all hover:scale-110"></button>
-                            <button onclick="changeMockupColor('indigo', '#6366f1')" class="w-8 h-8 rounded-full bg-indigo-500 border-2 border-white/20 focus:border-white transition-all hover:scale-110"></button>
-                            <button onclick="changeMockupColor('rose', '#f43f5e')" class="w-8 h-8 rounded-full bg-rose-500 border-2 border-white/20 focus:border-white transition-all hover:scale-110"></button>
-                            <button onclick="changeMockupColor('amber', '#f59e0b')" class="w-8 h-8 rounded-full bg-amber-500 border-2 border-white/20 focus:border-white transition-all hover:scale-110"></button>
-                            <button onclick="changeMockupColor('slate', '#475569')" class="w-8 h-8 rounded-full bg-slate-600 border-2 border-white/20 focus:border-white transition-all hover:scale-110"></button>
+                            <button onclick="changeMockupColor('emerald', '#10b981')" class="w-8 h-8 rounded-full bg-emerald-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
+                            <button onclick="changeMockupColor('indigo', '#6366f1')" class="w-8 h-8 rounded-full bg-indigo-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
+                            <button onclick="changeMockupColor('rose', '#f43f5e')" class="w-8 h-8 rounded-full bg-rose-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
+                            <button onclick="changeMockupColor('amber', '#f59e0b')" class="w-8 h-8 rounded-full bg-amber-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
+                            <button onclick="changeMockupColor('slate', '#475569')" class="w-8 h-8 rounded-full bg-slate-600 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
                         </div>
                     </div>
 
                     <!-- Smartphone Mockup Wrapper -->
-                    <div class="relative w-full max-w-[310px] aspect-[9/19] rounded-[42px] border-[10px] border-dark-600 bg-dark-900 shadow-2xl overflow-hidden transition-all duration-300">
+                    <div class="relative w-full max-w-[310px] aspect-[9/19] rounded-[42px] border-[10px] border-gray-800 bg-gray-900 shadow-2xl overflow-hidden transition-all duration-300">
                         <!-- Notch -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-dark-600 rounded-b-2xl z-30 flex items-center justify-center">
-                            <span class="w-12 h-1 bg-dark-900 rounded-full block"></span>
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-2xl z-30 flex items-center justify-center">
+                            <span class="w-12 h-1 bg-gray-900 rounded-full block"></span>
                         </div>
 
                         <!-- Inner Screen -->
@@ -189,7 +178,7 @@
                             <!-- Header -->
                             <div class="flex items-center justify-between border-b border-white/10 pb-3">
                                 <div class="flex items-center gap-1.5">
-                                    <div id="mockup-dot" class="w-6 h-6 rounded-md bg-brand-500 flex items-center justify-center text-[10px] text-dark-900 font-bold color-transition">
+                                    <div id="mockup-dot" class="w-6 h-6 rounded-md bg-brand-500 flex items-center justify-center text-[10px] text-white font-bold color-transition">
                                         DR
                                     </div>
                                     <div>
@@ -244,7 +233,7 @@
                                     </div>
                                 </div>
 
-                                <button id="mockup-btn" onclick="triggerMockupCheckin()" class="w-full bg-brand-500 text-dark-900 font-bold text-[9px] py-2.5 rounded-lg shadow-md color-transition mt-2">
+                                <button id="mockup-btn" onclick="triggerMockupCheckin()" class="w-full bg-brand-500 text-white font-bold text-[9px] py-2.5 rounded-lg shadow-md color-transition mt-2">
                                     Confirmar Check-in do Dia
                                 </button>
                             </div>
@@ -270,392 +259,56 @@
     </section>
 
     <!-- SECTION 1.5: VÍDEO DE DEMONSTRAÇÃO -->
-    <section id="demonstracao" class="py-16 md:py-24 bg-dark-900 border-b border-white/5 relative">
+    <section id="demonstracao" class="py-16 md:py-24 bg-[#f8f9fa] border-b border-gray-200 relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <span class="text-xs text-brand-500 font-semibold tracking-widest uppercase block mb-3">Veja na Prática</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                <span class="text-xs text-brand-600 font-semibold tracking-widest uppercase block mb-3">Veja na Prática</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
                     Como funciona o seu novo ecossistema
                 </h2>
-                <p class="text-sm text-gray-400 mt-3 max-w-2xl mx-auto">
+                <p class="text-sm text-gray-600 mt-3 max-w-2xl mx-auto">
                     Assista ao vídeo abaixo para conhecer a interface do paciente e o painel de controle do nutricionista em detalhes.
                 </p>
             </div>
 
-            
-<div class="relative w-full aspect-video rounded-3xl overflow-hidden border-2 border-white/10 shadow-[0_0_50px_rgba(16,185,129,0.15)] bg-dark-800">
-
-    <iframe
-        class="absolute inset-0 w-full h-full"
-        src="https://www.youtube.com/embed/-lFBEsYcXSM?rel=0&playsinline=1"
-        title="Demonstração do sistema NutriSuaMarca"
-        width="1920"
-        height="1080"
-        loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-        allowfullscreen
-        style="border: 0;"
-    ></iframe>
-
-</div>
-
-</div>
-</section>
-
-
-    <!-- SECTION 2: RETENÇÃO ABSOLUTA E CARROSSEL -->
-    <section id="evolucao" class="py-20 md:py-28 bg-dark-800 border-b border-white/5 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs text-brand-500 font-semibold tracking-widest uppercase block mb-3">Retenção Absoluta</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                    Resultados visíveis motivam seus pacientes a <span class="text-emerald-400">não desistirem.</span>
-                </h2>
-                <p class="text-gray-300 mt-4 text-sm sm:text-base">
-                    Explore no carrossel abaixo as telas incríveis que seu paciente terá na palma da mão. <strong class="text-white">Arraste para o lado</strong> para ver cada detalhe da interface focada em adesão e usabilidade.
-                </p>
-            </div>
-
-            <!-- Carousel Wrapper -->
-            <div class="relative w-full">
-                <!-- Hint to scroll -->
-                <div class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-l from-dark-800 to-transparent w-16 h-full pointer-events-none md:hidden"></div>
-                
-                <div class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory no-scrollbar px-4 md:px-0">
-                    
-                    <!-- SCREEN 1: Dashboard Inicial -->
-                    <div class="snap-center shrink-0 w-[280px] h-[580px] bg-[#fff1f2] rounded-[32px] border-8 border-dark-900 shadow-xl overflow-hidden relative font-sans flex flex-col">
-                        <!-- Top Red Section -->
-                        <div class="bg-[#f43f5e] p-6 pt-8 text-white rounded-b-3xl">
-                            <div class="flex justify-between items-center mb-6">
-                                <span class="bg-white/20 text-[10px] font-bold px-2 py-1 rounded-full flex items-center gap-1"><span class="text-white text-xs">✦</span> OFICIAL</span>
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                            </div>
-                            <p class="text-xs text-white/80 font-medium mb-1">Nutri seu App</p>
-                            <h3 class="text-2xl font-bold mb-6">Boa tarde, Maria</h3>
-                            <p class="text-xs font-bold text-white/80 mb-1">Mensagem do dia</p>
-                            <p class="text-sm font-semibold italic">"Você está mais perto do que imagina."</p>
-                        </div>
-                        
-                        <!-- Content Below -->
-                        <div class="p-4 flex-1">
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <div class="text-[#f43f5e] mb-2">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                </div>
-                                <h4 class="text-[#1e293b] font-bold text-lg mb-3">Minha Dieta</h4>
-                                <div class="bg-[#ffe4e6] text-[#e11d48] text-[11px] font-bold px-3 py-1.5 rounded-full inline-block mb-3">
-                                    Próxima refeição: Almoço 🥩🥦
-                                </div>
-                                <p class="text-[#e11d48] text-xs font-semibold mb-4 leading-relaxed">
-                                    Hoje é uma nova oportunidade para manter o foco.
-                                </p>
-                                <a href="#" class="text-[#f43f5e] text-xs font-bold flex items-center gap-1">Ver meu plano alimentar →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SCREEN 2: Refeições -->
-                    <div class="snap-center shrink-0 w-[280px] h-[580px] bg-[#fff1f2] rounded-[32px] border-8 border-dark-900 shadow-xl overflow-hidden relative font-sans flex flex-col">
-                        <div class="bg-[#f43f5e] p-6 pt-8 pb-8 text-white rounded-b-3xl">
-                            <h3 class="text-2xl font-bold mb-1">Olá, Maria</h3>
-                            <p class="text-sm text-white/80">4 refeições disponíveis.</p>
-                        </div>
-                        <div class="p-4 flex-1 space-y-3 overflow-y-auto">
-                            <!-- Refeição Item -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex justify-between items-center">
-                                <div>
-                                    <h4 class="text-[#1e293b] font-bold text-sm">Café da manhã ☕🥖</h4>
-                                    <p class="text-gray-400 text-[10px]">1 opções disponíveis</p>
-                                </div>
-                                <span class="text-[#f43f5e] font-bold">∨</span>
-                            </div>
-                            <!-- Refeição Item -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex justify-between items-center">
-                                <div>
-                                    <h4 class="text-[#1e293b] font-bold text-sm">Almoço 🥩🥦</h4>
-                                    <p class="text-gray-400 text-[10px]">1 opções disponíveis</p>
-                                </div>
-                                <span class="text-[#f43f5e] font-bold">∨</span>
-                            </div>
-                            <!-- Refeição Item -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex justify-between items-center">
-                                <div>
-                                    <h4 class="text-[#1e293b] font-bold text-sm">Lanche da tarde 🍩</h4>
-                                    <p class="text-gray-400 text-[10px]">1 opções disponíveis</p>
-                                </div>
-                                <span class="text-[#f43f5e] font-bold">∨</span>
-                            </div>
-                            <!-- Refeição Item -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex justify-between items-center">
-                                <div>
-                                    <h4 class="text-[#1e293b] font-bold text-sm">Ceia 🍪🥛</h4>
-                                    <p class="text-gray-400 text-[10px]">1 opções disponíveis</p>
-                                </div>
-                                <span class="text-[#f43f5e] font-bold">∨</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SCREEN 3: Calendário / Progresso -->
-                    <div class="snap-center shrink-0 w-[280px] h-[580px] bg-[#fff1f2] rounded-[32px] border-8 border-dark-900 shadow-xl overflow-hidden relative font-sans flex flex-col">
-                        <div class="bg-[#f43f5e] p-5 pt-8 text-white rounded-b-3xl">
-                            <h3 class="text-xl font-bold mb-2">Como foi seu dia?</h3>
-                            <p class="text-xs text-white/90 leading-relaxed">Responda no fim do dia. Seu progresso ficará salvo no calendário.</p>
-                        </div>
-                        <div class="px-4 py-4">
-                            <h4 class="text-[#1e293b] font-bold text-lg">Seu progresso</h4>
-                            <p class="text-xs text-gray-500 mb-4">Acompanhe seu progresso em sono, atividade física e muito mais</p>
-                            
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <div class="flex justify-between items-center mb-4 text-[#f43f5e] font-bold text-sm">
-                                    <span>&lt;</span>
-                                    <span class="text-[#1e293b] text-base">Julho 2026</span>
-                                    <span>&gt;</span>
-                                </div>
-                                <!-- Micro Calendar Grid -->
-                                <div class="grid grid-cols-7 gap-1.5 text-center text-[10px] text-gray-500 font-medium mb-4">
-                                    <div class="bg-gray-100 rounded-md py-1">1</div><div class="bg-gray-100 rounded-md py-1">2</div><div class="bg-gray-100 rounded-md py-1">3</div>
-                                    <div class="bg-gray-100 rounded-md py-1">4</div><div class="bg-gray-100 rounded-md py-1">5</div><div class="bg-gray-100 rounded-md py-1">6</div>
-                                    <div class="bg-gray-100 rounded-md py-1">7</div><div class="bg-gray-100 rounded-md py-1">8</div><div class="bg-gray-100 rounded-md py-1">9</div>
-                                    <div class="bg-gray-100 rounded-md py-1">10</div><div class="bg-gray-100 rounded-md py-1">11</div><div class="bg-gray-100 rounded-md py-1">12</div>
-                                    <div class="bg-gray-100 rounded-md py-1">13</div>
-                                    <div class="bg-[#ef4444] text-white rounded-md py-1">14</div>
-                                    <div class="bg-[#e11d48] text-white rounded-md py-1">15</div>
-                                    <div class="bg-gray-100 rounded-md py-1">16</div><div class="bg-gray-100 rounded-md py-1">17</div><div class="bg-gray-100 rounded-md py-1">18</div>
-                                    <div class="bg-[#ef4444] text-white rounded-md py-1">19</div>
-                                    <div class="bg-gray-100 rounded-md py-1">20</div><div class="bg-gray-100 rounded-md py-1">21</div>
-                                    <div class="bg-[#f59e0b] text-white rounded-md py-1">22</div>
-                                    <div class="bg-gray-100 rounded-md py-1">23</div>
-                                    <div class="bg-gray-100 rounded-md py-1">24</div>
-                                </div>
-                                <h5 class="text-xs font-bold text-[#1e293b] mb-2">Legenda</h5>
-                                <div class="space-y-1.5 text-[10px] text-[#1e293b]">
-                                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-[#e11d48]"></span> Ótimo dia</div>
-                                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-[#f59e0b]"></span> Dia parcial</div>
-                                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-[#ef4444]"></span> Dia difícil</div>
-                                    <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-gray-200"></span> Sem registro</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SCREEN 4: Check-in Hábitos -->
-                    <div class="snap-center shrink-0 w-[280px] h-[580px] bg-[#fff1f2] rounded-[32px] border-8 border-dark-900 shadow-xl overflow-hidden relative font-sans p-4 pt-6">
-                        <h3 class="text-xl font-bold text-[#1e293b] mb-2">Responda como foi seu dia</h3>
-                        <p class="text-[10px] text-gray-500 mb-4 leading-relaxed">
-                            De preferência, responda no final do dia. Essas informações ajudam você e seu nutricionista a acompanhar sua evolução.
-                        </p>
-                        
-                        <div class="space-y-3 overflow-y-auto max-h-[420px] pb-4">
-                            <!-- Questão 1 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <h4 class="text-[#1e293b] font-bold text-sm mb-3">Dormiu bem?</h4>
-                                <div class="flex gap-2">
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Sim</button>
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Mais ou menos</button>
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Não</button>
-                                </div>
-                            </div>
-                            <!-- Questão 2 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <h4 class="text-[#1e293b] font-bold text-sm mb-3">Fez atividade física?</h4>
-                                <div class="flex gap-2">
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Sim</button>
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Não</button>
-                                </div>
-                            </div>
-                            <!-- Questão 3 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <h4 class="text-[#1e293b] font-bold text-sm mb-3">Bateu sua meta de água hoje?</h4>
-                                <div class="flex gap-2">
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Sim</button>
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Quase</button>
-                                    <button class="bg-[#ffe4e6] text-[#1e293b] font-semibold text-xs px-3 py-1.5 rounded-full">Não</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SCREEN 5: Módulos Extra -->
-                    <div class="snap-center shrink-0 w-[280px] h-[580px] bg-[#fff1f2] rounded-[32px] border-8 border-dark-900 shadow-xl overflow-hidden relative font-sans p-4 pt-8">
-                        <div class="space-y-4">
-                            <!-- Módulo 1 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <div class="text-[#f43f5e] mb-2 font-bold text-lg">☰</div>
-                                <h4 class="text-[#1e293b] font-bold text-sm mb-1">Orientações do nutricionista</h4>
-                                <p class="text-gray-400 text-[10px] mb-3">Exames, orientações e anotações.</p>
-                                <a href="#" class="text-[#f43f5e] text-xs font-bold flex items-center gap-1">Ler orientações →</a>
-                            </div>
-                            <!-- Módulo 2 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <div class="text-[#f43f5e] mb-2 font-bold text-lg">📈</div>
-                                <h4 class="text-[#1e293b] font-bold text-sm mb-1">Evolução</h4>
-                                <p class="text-gray-400 text-[10px] mb-3">Acompanhe sua evolução corporal.</p>
-                                <div class="w-full bg-gray-200 h-1.5 rounded-full mb-2"><div class="bg-[#f43f5e] h-1.5 rounded-full w-[80%]"></div></div>
-                                <p class="text-[#f43f5e] text-[9px] font-bold mb-3">Dados atualizados pelo nutricionista.</p>
-                                <a href="#" class="text-[#f43f5e] text-xs font-bold flex items-center gap-1">Ver evolução →</a>
-                            </div>
-                            <!-- Módulo 3 -->
-                            <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-                                <div class="text-[#f43f5e] mb-2 font-bold text-lg">💊</div>
-                                <h4 class="text-[#1e293b] font-bold text-sm mb-1">Suplementação</h4>
-                                <p class="text-gray-400 text-[10px] mb-3">Prescrições cadastradas pelo nutricionista.</p>
-                                <a href="#" class="text-[#f43f5e] text-xs font-bold flex items-center gap-1">Ver prescrição →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-8 flex items-center justify-center gap-2 text-sm text-gray-400 md:hidden">
-                <svg class="w-5 h-5 text-brand-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                <span>Deslize para ver mais telas</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: O QUE EXISTE DENTRO DO APLICATIVO -->
-    <section id="funcionalidades" class="py-20 md:py-28 bg-dark-900 border-b border-white/5 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs text-brand-500 font-semibold tracking-widest uppercase block mb-3">Ecossistema Completo</span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                    Duas interfaces em um só <span class="bg-gradient-to-r from-brand-500 to-emerald-400 bg-clip-text text-transparent">Ecossistema</span>
-                </h2>
-                <p class="text-gray-300 mt-4 text-sm sm:text-base">
-                    Gerencie o consultório de forma unificada. De um lado, a sua plataforma de administração total; do outro, o aplicativo do paciente.
-                </p>
-            </div>
-
-            <!-- Tab Container -->
-            <div class="flex justify-center mb-12">
-                <div class="bg-dark-800 border border-white/10 p-1.5 rounded-xl flex gap-1 shadow-lg">
-                    <button id="tab-nutri-btn" onclick="switchFeatureTab('nutri')" class="px-6 py-3 rounded-lg text-sm font-bold transition-all bg-brand-500 text-dark-900 shadow-md">
-                        💻 Painel do Nutricionista
-                    </button>
-                    <button id="tab-paciente-btn" onclick="switchFeatureTab('paciente')" class="px-6 py-3 rounded-lg text-sm font-bold transition-all text-gray-400 hover:text-white">
-                        📱 Painel do Paciente
-                    </button>
-                </div>
-            </div>
-
-            <!-- Container das Interfaces (Grids) -->
-            <div class="w-full">
-                
-                <!-- TAB CONTENT: NUTRI (Active by default) - FULL LIST FROM IMAGES -->
-                <div id="features-nutri" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                    <!-- Funções extraídas da imagem enviada -->
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📊</div>
-                        <strong class="text-white text-sm block">Dashboard</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📅</div>
-                        <strong class="text-white text-sm block">Agenda</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">🛠️</div>
-                        <strong class="text-white text-sm block">Ferramentas</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">👥</div>
-                        <strong class="text-white text-sm block">Pacientes</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📝</div>
-                        <strong class="text-white text-sm block">Anotações internas</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">🧮</div>
-                        <strong class="text-white text-sm block">GET/VET</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📂</div>
-                        <strong class="text-white text-sm block">Categorias</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">🍎</div>
-                        <strong class="text-white text-sm block">Banco de alimentos</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">🍽️</div>
-                        <strong class="text-white text-sm block">Editar dieta</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">💊</div>
-                        <strong class="text-white text-sm block">Suplementação</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📋</div>
-                        <strong class="text-white text-sm block">Orientações</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📈</div>
-                        <strong class="text-white text-sm block">Evolução</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">🎨</div>
-                        <strong class="text-white text-sm block">Personalização</strong>
-                    </div>
-                    <div class="bg-dark-800 p-4 rounded-xl border border-white/5 hover:border-brand-500/30 transition-all text-center group">
-                        <div class="text-brand-500 text-2xl mb-2 group-hover:scale-110 transition-transform">⚙️</div>
-                        <strong class="text-white text-sm block">Configurações</strong>
-                    </div>
-                </div>
-
-                <!-- TAB CONTENT: PACIENTE -->
-                <div id="features-paciente" class="grid grid-cols-1 md:grid-cols-2 gap-8 hidden">
-                    <div class="bg-dark-800 p-8 rounded-2xl border border-white/5 hover:border-brand-500/20 transition-all flex flex-col justify-center">
-                        <span class="text-brand-500 font-black text-4xl mb-4 opacity-50">01.</span>
-                        <h4 class="text-2xl font-bold text-white mb-3">Minha Dieta & Cardápios</h4>
-                        <p class="text-gray-400 leading-relaxed">Acesso direto ao plano alimentar detalhado por refeição, com horários, quantidades, macros e fotos de substituições para o dia a dia.</p>
-                    </div>
-                    <div class="bg-dark-800 p-8 rounded-2xl border border-white/5 hover:border-brand-500/20 transition-all flex flex-col justify-center">
-                        <span class="text-brand-500 font-black text-4xl mb-4 opacity-50">02.</span>
-                        <h4 class="text-2xl font-bold text-white mb-3">Check-in de Hábitos</h4>
-                        <p class="text-gray-400 leading-relaxed">O paciente confirma o consumo de água, qualidade do sono, refeições seguidas e atividade física diariamente para gerar relatórios.</p>
-                    </div>
-                    <div class="bg-dark-800 p-8 rounded-2xl border border-white/5 hover:border-brand-500/20 transition-all flex flex-col justify-center">
-                        <span class="text-brand-500 font-black text-4xl mb-4 opacity-50">03.</span>
-                        <h4 class="text-2xl font-bold text-white mb-3">Orientações e Suplementos</h4>
-                        <p class="text-gray-400 leading-relaxed">Biblioteca exclusiva de dicas alimentares, receitas saudáveis e um módulo preciso informando os horários da suplementação.</p>
-                    </div>
-                    <div class="bg-dark-800 p-8 rounded-2xl border border-white/5 hover:border-brand-500/20 transition-all flex flex-col justify-center">
-                        <span class="text-brand-500 font-black text-4xl mb-4 opacity-50">04.</span>
-                        <h4 class="text-2xl font-bold text-white mb-3">Evolução e Fotos</h4>
-                        <p class="text-gray-400 leading-relaxed">O paciente insere peso, medidas e envia fotos de evolução. Tudo é transformado em gráficos vibrantes que demonstram o sucesso do seu método.</p>
-                    </div>
-                </div>
-
+            <div class="relative w-full aspect-video rounded-3xl overflow-hidden border-2 border-gray-200 shadow-xl bg-white">
+                <iframe
+                    class="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/-lFBEsYcXSM?rel=0&playsinline=1"
+                    title="Demonstração do sistema NutriSuaMarca"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                    allowfullscreen
+                    style="border: 0;"
+                ></iframe>
             </div>
         </div>
     </section>
 
     <!-- SECTION 6: QUER TESTAR AGORA? -->
-    <section id="testar" class="py-20 bg-dark-800 border-b border-white/5 relative">
+    <section id="testar" class="py-20 bg-white border-b border-gray-200 relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-tr from-brand-950/40 to-emerald-950/20 border border-brand-500/30 rounded-3xl p-8 md:p-12">
+            <div class="bg-gradient-to-tr from-brand-50 to-emerald-50 border border-brand-200 rounded-3xl p-8 md:p-12">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     
                     <div>
-                        <div class="inline-flex items-center gap-1.5 text-[11px] font-bold text-brand-500 uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full mb-4">
+                        <div class="inline-flex items-center gap-1.5 text-[11px] font-bold text-brand-600 uppercase tracking-widest bg-brand-100/50 px-3 py-1 rounded-full mb-4">
                             ⭐ Teste de Usabilidade Instantâneo
                         </div>
-                        <h3 class="text-2xl sm:text-3xl font-black text-white leading-tight">
+                        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">
                             Explore a interface do paciente e conheça o sistema por dentro.
                         </h3>
-                        <p class="text-sm text-gray-300 mt-4 leading-relaxed">
+                        <p class="text-sm text-gray-600 mt-4 leading-relaxed">
                             Basta clicar no botão <strong>Testar Agora</strong> abaixo e inserir o e-mail de teste para navegar diretamente na interface de demonstração do paciente.
                         </p>
                         
-                        <div class="mt-6 space-y-2 text-xs bg-dark-900/80 p-4 rounded-xl border border-white/5">
+                        <div class="mt-6 space-y-2 text-xs bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
                             <div class="pt-1">
-                                <span class="text-gray-400 text-[11px]">Utilize este e-mail para acesso demonstrativo:</span>
-                                <p class="text-emerald-400 mt-1 font-mono text-sm"><strong>E-mail de teste:</strong> teste@gmail.com</p>
+                                <span class="text-gray-500 text-[11px]">Utilize este e-mail para acesso demonstrativo:</span>
+                                <p class="text-brand-600 mt-1 font-mono text-sm"><strong>E-mail de teste:</strong> teste@gmail.com</p>
                                 <p class="text-gray-500 text-[10px] leading-tight mt-1.5">Nota: O acesso serve exclusivamente para você experimentar o ecossistema na prática e entender a excelente fluidez que seus pacientes terão.</p>
                             </div>
                         </div>
@@ -664,9 +317,9 @@
                     <div class="flex flex-col items-center justify-center">
                         <div class="text-center space-y-4">
                             <span class="text-4xl">👋</span>
-                            <h4 class="text-lg font-bold text-white">Pronto para Testar?</h4>
-                            <p class="text-xs text-gray-400 max-w-xs mx-auto">Clique no botão abaixo para abrir a nossa tela oficial e utilize as credenciais descritas.</p>
-                            <a href="https://nutri-platform-romulo.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-dark-900 font-extrabold text-sm py-3.5 px-8 rounded-xl shadow-lg shadow-brand-500/25 transition-all">
+                            <h4 class="text-lg font-bold text-gray-900">Pronto para Testar?</h4>
+                            <p class="text-xs text-gray-600 max-w-xs mx-auto">Clique no botão abaixo para abrir a nossa tela oficial e utilize as credenciais descritas.</p>
+                            <a href="https://nutri-platform-romulo.web.app/" target="_blank" class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-extrabold text-sm py-3.5 px-8 rounded-xl shadow-lg shadow-brand-500/25 transition-all">
                                 Testar Agora
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
@@ -679,55 +332,55 @@
     </section>
 
     <!-- SECTION 7: TABELA COMPARATIVO -->
-    <section id="comparativo" class="py-20 md:py-28 bg-dark-900 border-b border-white/5">
+    <section id="comparativo" class="py-20 md:py-28 bg-[#f8f9fa] border-b border-gray-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs text-brand-500 font-semibold tracking-widest uppercase block mb-3">Estudo de Viabilidade</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                <span class="text-xs text-brand-600 font-semibold tracking-widest uppercase block mb-3">Estudo de Viabilidade</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight">
                     Por que o nosso modelo de negócio é imbatível?
                 </h2>
-                <p class="text-sm text-gray-400 mt-2">Comparamos a nossa proposta com as tradicionais assinaturas do mercado.</p>
+                <p class="text-sm text-gray-600 mt-2">Comparamos a nossa proposta com as tradicionais assinaturas do mercado.</p>
             </div>
 
-            <div class="overflow-x-auto rounded-2xl border border-white/10 bg-dark-800 scrollbar-thin">
+            <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm scrollbar-thin">
                 <table class="w-full text-left border-collapse min-w-[600px]">
                     <thead>
-                        <tr class="border-b border-white/10 bg-dark-900/50">
-                            <th class="p-6 text-sm font-bold text-white">Benefícios e Recursos</th>
-                            <th class="p-6 text-sm font-bold text-brand-500 bg-brand-500/5">NutriSuaMarca</th>
-                            <th class="p-6 text-sm font-bold text-gray-400">Assinaturas do Mercado</th>
+                        <tr class="border-b border-gray-200 bg-gray-50">
+                            <th class="p-6 text-sm font-bold text-gray-900">Benefícios e Recursos</th>
+                            <th class="p-6 text-sm font-bold text-brand-600 bg-brand-50">NutriSuaMarca</th>
+                            <th class="p-6 text-sm font-bold text-gray-700">Assinaturas do Mercado</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-white/5 text-sm">
+                    <tbody class="divide-y divide-gray-200 text-sm">
                         <tr>
-                            <td class="p-6 text-gray-300">Custo Mensal Recorrente</td>
-                            <td class="p-6 text-emerald-400 font-semibold bg-brand-500/5">❌ R$ 0,00 (Sem mensalidades)</td>
-                            <td class="p-6 text-red-400">⚠️ R$ 90 a R$ 150 / mês</td>
+                            <td class="p-6 text-gray-700">Custo Mensal Recorrente</td>
+                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">❌ R$ 0,00 (Sem mensalidades)</td>
+                            <td class="p-6 text-red-600">⚠️ R$ 90 a R$ 150 / mês</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-300">Marca Personalizada (Sua Identidade)</td>
-                            <td class="p-6 text-emerald-400 font-semibold bg-brand-500/5">✔ Incluso (Nome e cores de sua preferência)</td>
+                            <td class="p-6 text-gray-700">Marca Personalizada (Sua Identidade)</td>
+                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Incluso (Nome e cores de sua preferência)</td>
                             <td class="p-6 text-gray-500">❌ Logo e nome genérico do sistema deles</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-300">Domínio Próprio</td>
-                            <td class="p-6 text-emerald-400 font-semibold bg-brand-500/5">✔ Incluso (Adicione seu domínio)</td>
+                            <td class="p-6 text-gray-700">Domínio Próprio</td>
+                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Incluso (Adicione seu domínio)</td>
                             <td class="p-6 text-gray-500">❌ Endereço com marca da empresa de assinatura</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-300">Personalização de Cores Completa</td>
-                            <td class="p-6 text-emerald-400 font-semibold bg-brand-500/5">✔ Sim (Adaptado exatamente ao seu estilo)</td>
+                            <td class="p-6 text-gray-700">Personalização de Cores Completa</td>
+                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Sim (Adaptado exatamente ao seu estilo)</td>
                             <td class="p-6 text-gray-500">❌ Estilos e tons engessados padrão</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-300">Fidelização a Longo Prazo</td>
-                            <td class="p-6 text-emerald-400 font-semibold bg-brand-500/5">✔ Extrema (Seu ecossistema único)</td>
+                            <td class="p-6 text-gray-700">Fidelização a Longo Prazo</td>
+                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Extrema (Seu ecossistema único)</td>
                             <td class="p-6 text-gray-500">⚠️ Média (O paciente muda com facilidade)</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-300">Retorno sobre o Investimento</td>
-                            <td class="p-6 text-emerald-400 font-semibold bg-brand-500/5">⚡ Rápido (Seu app próprio por valor simbólico)</td>
+                            <td class="p-6 text-gray-700">Retorno sobre o Investimento</td>
+                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">⚡ Rápido (Seu app próprio por valor simbólico)</td>
                             <td class="p-6 text-gray-500">❌ Custo infinito acumulado ao longo dos anos</td>
                         </tr>
                     </tbody>
@@ -742,46 +395,46 @@
     </section>
 
     <!-- COMPARATIVO MATEMÁTICO REAL (ROI Card Melhorado) -->
-    <section class="py-20 md:py-24 bg-dark-800 border-b border-white/5 relative">
+    <section class="py-20 md:py-24 bg-white border-b border-gray-200 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-br from-brand-900/40 via-dark-900 to-emerald-950/30 border border-brand-500/50 rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-[0_0_50px_rgba(16,185,129,0.15)]">
-                <div class="absolute -right-32 -bottom-32 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="bg-gradient-to-br from-brand-50 via-white to-emerald-50 border border-brand-200 rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-xl">
+                <div class="absolute -right-32 -bottom-32 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="text-left">
-                        <span class="inline-block px-3 py-1 bg-brand-500/20 text-brand-400 border border-brand-500/30 rounded-full text-xs font-black uppercase tracking-widest mb-6">⚡ Decisão Inteligente</span>
-                        <h3 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
-                            Faça as contas de quanto você <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-300">economiza.</span>
+                        <span class="inline-block px-3 py-1 bg-brand-100 text-brand-600 border border-brand-200 rounded-full text-xs font-black uppercase tracking-widest mb-6">⚡ Decisão Inteligente</span>
+                        <h3 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+                            Faça as contas de quanto você <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-500">economiza.</span>
                         </h3>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
-                            Em média, softwares e apps conhecidos no mercado cobram mensalidades de <strong class="text-white">R$ 79,00 por mês</strong>. Isso equivale a <strong class="text-red-400">R$ 948,00 por ano</strong> em um aplicativo que nunca será seu.
+                        <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
+                            Em média, softwares e apps conhecidos no mercado cobram mensalidades de <strong class="text-gray-900">R$ 79,00 por mês</strong>. Isso equivale a <strong class="text-red-600">R$ 948,00 por ano</strong> em um aplicativo que nunca será seu.
                         </p>
-                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
-                            Com a nossa proposta, você adquire uma <strong class="text-white text-xl border-b-2 border-brand-500 pb-0.5">licença vitalícia</strong> para sua conta. Sem mensalidades, sem taxas recorrentes de grandes empresas, você pagará um valor ÚNICO!
+                        <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                            Com a nossa proposta, você adquire uma <strong class="text-gray-900 text-xl border-b-2 border-brand-500 pb-0.5">licença vitalícia</strong> para sua conta. Sem mensalidades, sem taxas recorrentes de grandes empresas, você pagará um valor ÚNICO!
                         </p>
                     </div>
 
-                    <div class="bg-dark-950 border border-brand-500/30 rounded-[2rem] p-8 text-center text-glow relative shadow-2xl">
-                        <div class="mb-8 border-b border-white/5 pb-8 relative">
-                            <span class="text-sm text-gray-400 font-medium block mb-2 uppercase tracking-wide">Assinaturas Comuns (Aluguel)</span>
-                            <div class="flex justify-center items-center gap-3 opacity-50">
-                                <span class="text-3xl text-red-500 font-black line-through decoration-red-500/50 decoration-4">R$ 948,00</span>
-                                <span class="text-sm text-red-400 font-bold mt-2">/ ano</span>
+                    <div class="bg-white border border-brand-200 rounded-[2rem] p-8 text-center relative shadow-lg">
+                        <div class="mb-8 border-b border-gray-100 pb-8 relative">
+                            <span class="text-sm text-gray-500 font-medium block mb-2 uppercase tracking-wide">Assinaturas Comuns (Aluguel)</span>
+                            <div class="flex justify-center items-center gap-3 opacity-60">
+                                <span class="text-3xl text-red-600 font-black line-through decoration-red-500/50 decoration-4">R$ 948,00</span>
+                                <span class="text-sm text-red-500 font-bold mt-2">/ ano</span>
                             </div>
                         </div>
                         
                         <div>
-                            <div class="inline-block px-4 py-1.5 bg-brand-500/20 text-brand-400 rounded-full text-xs font-black uppercase tracking-widest mb-4 animate-pulse border border-brand-500/40">
+                            <div class="inline-block px-4 py-1.5 bg-brand-50 text-brand-600 rounded-full text-xs font-black uppercase tracking-widest mb-4 animate-pulse border border-brand-200">
                                 💎 Seu app próprio VITALÍCIO
                             </div>
                             <div class="text-center">
-                                <span class="text-xs text-brand-500 font-bold uppercase tracking-wider block mb-1">POR APENAS:</span>
-                                <span class="text-5xl md:text-6xl text-emerald-400 font-black block leading-none mb-3">R$ 149<span class="text-3xl">,90</span></span>
-                                <span class="text-[10px] text-gray-400 block uppercase tracking-widest mt-2">Pagamento Único • Sem Mensalidade</span>
+                                <span class="text-xs text-brand-600 font-bold uppercase tracking-wider block mb-1">POR APENAS:</span>
+                                <span class="text-5xl md:text-6xl text-brand-600 font-black block leading-none mb-3">R$ 149<span class="text-3xl">,90</span></span>
+                                <span class="text-[10px] text-gray-500 block uppercase tracking-widest mt-2">Pagamento Único • Sem Mensalidade</span>
                             </div>
                         </div>
 
-                        <button onclick="openPixModal()" class="w-full mt-8 bg-brand-500 hover:bg-brand-600 text-dark-900 font-black text-lg py-4 rounded-xl shadow-lg shadow-brand-500/20 hover:scale-[1.02] transition-all">
+                        <button onclick="openPixModal()" class="w-full mt-8 bg-brand-500 hover:bg-brand-600 text-white font-black text-lg py-4 rounded-xl shadow-lg shadow-brand-500/20 hover:scale-[1.02] transition-all">
                             Quero Economizar Agora
                         </button>
                     </div>
@@ -791,49 +444,49 @@
     </section>
 
     <!-- SECTION 10: DEMONSTRAÇÃO E ORÇAMENTO (PREMIUM BOX) -->
-    <section id="oferta" class="py-20 md:py-28 bg-dark-900 relative">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-900/10 via-transparent to-transparent pointer-events-none"></div>
+    <section id="oferta" class="py-20 md:py-28 bg-[#f8f9fa] relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-200/50 via-transparent to-transparent pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
-            <div class="bg-gradient-to-b from-dark-800 to-dark-900 border border-brand-500/50 rounded-[32px] p-8 md:p-14 text-center relative shadow-2xl shadow-brand-500/10">
+            <div class="bg-gradient-to-b from-white to-gray-50 border border-gray-200 rounded-[32px] p-8 md:p-14 text-center relative shadow-xl">
 
-                <p class="text-sm text-brand-500 font-bold uppercase tracking-widest mt-4">Criação Exclusiva e Direta</p>
-                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-4 mb-6 leading-tight">
-                    Seu App. Sua Marca. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-300">Pagamento Único.</span>
+                <p class="text-sm text-brand-600 font-bold uppercase tracking-widest mt-4">Criação Exclusiva e Direta</p>
+                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-4 mb-6 leading-tight">
+                    Seu App. Sua Marca. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-emerald-500">Pagamento Único.</span>
                 </h3>
 
                 <!-- Divisor Decorativo -->
                 <div class="w-24 h-1 bg-gradient-to-r from-brand-500 to-emerald-400 mx-auto my-6 rounded-full"></div>
 
-                <p class="text-gray-300 max-w-2xl mx-auto text-sm sm:text-lg mb-10 leading-relaxed font-medium">
-                    Sem amarras. Sem mensalidades abusivas. A ferramenta é <strong class="text-white">vitalícia e totalmente sua</strong>. Desenvolvido por especialistas para impulsionar a sua autoridade clínica.
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-lg mb-10 leading-relaxed font-medium">
+                    Sem amarras. Sem mensalidades abusivas. A ferramenta é <strong class="text-gray-900">vitalícia e totalmente sua</strong>. Desenvolvido por especialistas para impulsionar a sua autoridade clínica.
                 </p>
 
                 <!-- Pricing Container (Passo a passo CONDENSADO) -->
-                <div class="bg-dark-950 max-w-2xl mx-auto p-6 md:p-8 rounded-2xl border border-white/5 mb-10 text-left space-y-4">
-                    <h4 class="text-white font-bold text-lg flex items-center gap-2 mb-2">
+                <div class="bg-gray-50 max-w-2xl mx-auto p-6 md:p-8 rounded-2xl border border-gray-200 mb-10 text-left space-y-4">
+                    <h4 class="text-gray-900 font-bold text-lg flex items-center gap-2 mb-2">
                         <span>🤝</span> Como adquirir seu acesso:
                     </h4>
                     
-                    <ul class="space-y-3 text-sm text-gray-300">
+                    <ul class="space-y-3 text-sm text-gray-700">
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-500 font-black mt-0.5">1.</span>
-                            <p><strong class="text-white">Contato Direto:</strong> Fale com nosso suporte no WhatsApp clicando no botão abaixo.</p>
+                            <span class="text-brand-600 font-black mt-0.5">1.</span>
+                            <p><strong class="text-gray-900">Contato Direto:</strong> Fale com nosso suporte no WhatsApp clicando no botão abaixo.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-500 font-black mt-0.5">2.</span>
-                            <p><strong class="text-white">Transparência:</strong> Tire qualquer dúvida e tenha a certeza de que o app atende seu consultório.</p>
+                            <span class="text-brand-600 font-black mt-0.5">2.</span>
+                            <p><strong class="text-gray-900">Transparência:</strong> Tire qualquer dúvida e tenha a certeza de que o app atende seu consultório.</p>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-brand-500 font-black mt-0.5">3.</span>
-                            <p><strong class="text-brand-400">Ativação Única:</strong> Pagando o valor simbólico de adesão, o app é seu. Sem mensalidades.</p>
+                            <span class="text-brand-600 font-black mt-0.5">3.</span>
+                            <p><strong class="text-brand-600">Ativação Única:</strong> Pagando o valor simbólico de adesão, o app é seu. Sem mensalidades.</p>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Botão de Compras (CTA Final direcionado ao WhatsApp) -->
                 <div class="flex justify-center">
-                    <button onclick="openPixModal()" class="inline-flex items-center justify-center gap-3 bg-brand-500 hover:bg-brand-600 text-dark-900 font-black text-lg md:text-xl py-5 px-12 rounded-2xl shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.4)] hover:-translate-y-1 active:translate-y-0 transition-all w-full sm:w-auto">
+                    <button onclick="openPixModal()" class="inline-flex items-center justify-center gap-3 bg-brand-500 hover:bg-brand-600 text-white font-black text-lg md:text-xl py-5 px-12 rounded-2xl shadow-[0_0_40px_rgba(16,185,129,0.2)] hover:shadow-[0_0_60px_rgba(16,185,129,0.3)] hover:-translate-y-1 active:translate-y-0 transition-all w-full sm:w-auto">
                         Eu quero meu Software AGORA!
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.863-9.736.001-2.599-1.01-5.048-2.85-6.892C16.638 2.131 14.2 1.12 11.62 1.12c-5.44 0-9.866 4.372-9.87 9.739 0 1.708.47 3.374 1.36 4.83l-.995 3.635 3.743-.974z"/></svg>
                     </button>
@@ -848,42 +501,42 @@
     </section>
 
     <!-- SECTION 11: PERGUNTAS FREQUENTES (FAQ) -->
-    <section id="faq" class="py-20 md:py-28 bg-dark-800 border-t border-white/5">
+    <section id="faq" class="py-20 md:py-28 bg-white border-t border-gray-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
             <div class="text-center mb-16">
-                <span class="text-xs text-brand-500 font-semibold tracking-widest uppercase block mb-3">Tire Suas Dúvidas</span>
-                <h2 class="text-3xl font-black text-white tracking-tight">Perguntas Frequentes</h2>
-                <p class="text-sm text-gray-400 mt-2">Consulte as principais respostas sobre o seu aplicativo personalizado para nutricionista.</p>
+                <span class="text-xs text-brand-600 font-semibold tracking-widest uppercase block mb-3">Tire Suas Dúvidas</span>
+                <h2 class="text-3xl font-black text-gray-900 tracking-tight">Perguntas Frequentes</h2>
+                <p class="text-sm text-gray-600 mt-2">Consulte as principais respostas sobre o seu aplicativo personalizado para nutricionista.</p>
             </div>
 
             <div class="space-y-4">
-                <div class="border border-white/10 rounded-xl overflow-hidden bg-dark-900">
-                    <button class="w-full text-left p-6 font-bold text-white flex justify-between items-center hover:bg-white/5 focus:outline-none" onclick="toggleFaq(1)">
+                <div class="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-100 focus:outline-none" onclick="toggleFaq(1)">
                         <span>O aplicativo é realmente meu? Tem mensalidade?</span>
                         <span id="faq-icon-1" class="text-brand-500 transition-transform font-bold text-xl">+</span>
                     </button>
-                    <div id="faq-ans-1" class="hidden p-6 pt-0 border-t border-white/5 text-sm text-gray-400 leading-relaxed">
+                    <div id="faq-ans-1" class="hidden p-6 pt-0 border-t border-gray-200 text-sm text-gray-600 leading-relaxed">
                         Sim, 100%! O sistema é licenciado para você de forma vitalícia e não possui nenhum tipo de mensalidade. O pagamento da adesão é único. Ele rodará com o seu nome e suas cores definidos.
                     </div>
                 </div>
 
-                <div class="border border-white/10 rounded-xl overflow-hidden bg-dark-900">
-                    <button class="w-full text-left p-6 font-bold text-white flex justify-between items-center hover:bg-white/5 focus:outline-none" onclick="toggleFaq(2)">
+                <div class="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-100 focus:outline-none" onclick="toggleFaq(2)">
                         <span>Consigo mudar as cores e o nome visível?</span>
                         <span id="faq-icon-2" class="text-brand-500 transition-transform font-bold text-xl">+</span>
                     </button>
-                    <div id="faq-ans-2" class="hidden p-6 pt-0 border-t border-white/5 text-sm text-gray-400 leading-relaxed">
+                    <div id="faq-ans-2" class="hidden p-6 pt-0 border-t border-gray-200 text-sm text-gray-600 leading-relaxed">
                         Com certeza. No momento da configuração, o sistema é ajustado com seu nome profissional de preferência, rubrica e a paleta de cores institucional que melhor representa o seu consultório.
                     </div>
                 </div>
 
-                <div class="border border-white/10 rounded-xl overflow-hidden bg-dark-900">
-                    <button class="w-full text-left p-6 font-bold text-white flex justify-between items-center hover:bg-white/5 focus:outline-none" onclick="toggleFaq(3)">
+                <div class="border border-gray-200 rounded-xl overflow-hidden bg-gray-50">
+                    <button class="w-full text-left p-6 font-bold text-gray-900 flex justify-between items-center hover:bg-gray-100 focus:outline-none" onclick="toggleFaq(3)">
                         <span>Preciso saber programar ou mexer com TI?</span>
                         <span id="faq-icon-3" class="text-brand-500 transition-transform font-bold text-xl">+</span>
                     </button>
-                    <div id="faq-ans-3" class="hidden p-6 pt-0 border-t border-white/5 text-sm text-gray-400 leading-relaxed">
+                    <div id="faq-ans-3" class="hidden p-6 pt-0 border-t border-gray-200 text-sm text-gray-600 leading-relaxed">
                         De forma alguma! Você não mexe em uma única linha de código. Entregamos a plataforma prontinha, configurada e explicamos como funciona no seu uso diário clínico.
                     </div>
                 </div>
@@ -893,14 +546,14 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-dark-900 border-t border-white/5 py-12 text-gray-500 text-sm">
+    <footer class="bg-[#f8f9fa] border-t border-gray-200 py-12 text-gray-500 text-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             
             <div class="flex items-center gap-3">
                 <div class="shrink-0">
                     <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50" cy="50" r="40" stroke="url(#multicolorGradientFooter)" stroke-width="8"/>
-                        <text x="50%" y="64%" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif">R</text>
+                        <text x="50%" y="64%" font-size="38" font-weight="900" fill="#1e293b" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif">R</text>
                         <defs>
                             <linearGradient id="multicolorGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#10b981" />
@@ -913,21 +566,21 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="text-white font-bold block leading-none text-base">NutriSuaMarca</span>
+                    <span class="text-gray-900 font-bold block leading-none text-base">NutriSuaMarca</span>
                 </div>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-6 text-center sm:text-left">
                 <div>
-                    <span class="text-xs text-gray-400 uppercase tracking-wider block mb-1">Contato Suporte</span>
-                    <a href="mailto:suporte@nutriseuapp.com.br" class="text-gray-300 hover:text-white block transition-colors">suporte@nutriseuapp.com.br</a>
-                    <a href="https://wa.me/5548984724444" target="_blank" class="text-gray-300 hover:text-emerald-400 block transition-colors">WhatsApp: (48) 98472-4444</a>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider block mb-1">Contato Suporte</span>
+                    <a href="mailto:suporte@nutriseuapp.com.br" class="text-gray-600 hover:text-brand-600 block transition-colors">suporte@nutriseuapp.com.br</a>
+                    <a href="https://wa.me/5593984351315" target="_blank" class="text-gray-600 hover:text-brand-600 block transition-colors">WhatsApp: (93) 98435-1315</a>
                 </div>
             </div>
 
         </div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-white/5 text-center text-xs text-gray-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-200 text-center text-xs text-gray-500">
             <p>© 2026 NutriSeuApp. Todos os direitos reservados. Marcas, nomenclaturas e layouts customizados sob responsabilidade do cliente.</p>
         </div>
     </footer>
@@ -948,8 +601,8 @@
             btn.style.backgroundColor = hexValue;
             
             if (colorName === 'rose' || colorName === 'amber' || colorName === 'emerald') {
-                btn.style.color = '#090a0f'; 
-                dot.style.color = '#090a0f';
+                btn.style.color = '#ffffff'; 
+                dot.style.color = '#ffffff';
             } else {
                 btn.style.color = '#ffffff'; 
                 dot.style.color = '#ffffff';
@@ -985,27 +638,6 @@
             }, 3000);
         }
 
-        function switchFeatureTab(tabName) {
-            const tabPacienteBtn = document.getElementById('tab-paciente-btn');
-            const tabNutriBtn = document.getElementById('tab-nutri-btn');
-            const pacienteDiv = document.getElementById('features-paciente');
-            const nutriDiv = document.getElementById('features-nutri');
-            
-            if (tabName === 'paciente') {
-                tabPacienteBtn.className = "px-6 py-3 rounded-lg text-sm font-bold transition-all bg-brand-500 text-dark-900 shadow-md";
-                tabNutriBtn.className = "px-6 py-3 rounded-lg text-sm font-bold transition-all text-gray-400 hover:text-white";
-                
-                pacienteDiv.classList.remove('hidden');
-                nutriDiv.classList.add('hidden');
-            } else {
-                tabNutriBtn.className = "px-6 py-3 rounded-lg text-sm font-bold transition-all bg-brand-500 text-dark-900 shadow-md";
-                tabPacienteBtn.className = "px-6 py-3 rounded-lg text-sm font-bold transition-all text-gray-400 hover:text-white";
-                
-                nutriDiv.classList.remove('hidden');
-                pacienteDiv.classList.add('hidden');
-            }
-        }
-
         function toggleFaq(index) {
             const ans = document.getElementById(`faq-ans-${index}`);
             const icon = document.getElementById(`faq-icon-${index}`);
@@ -1024,7 +656,7 @@
         function openPixModal() {
             const message = "Olá! Vi o NutriSuaMarca no site e gostaria de adquirir minha licença vitalícia. Como funciona?";
             const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/5548984724444?text=${encodedMessage}`, '_blank');
+            window.open(`https://wa.me/5593984351315?text=${encodedMessage}`, '_blank');
         }
     </script>
 </body>

@@ -65,6 +65,77 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+/* Simulador white label: escopo isolado para não interferir no restante do site. */
+#simulador { --sim-accent:#c32124; --sim-soft:#f9e9e9; --sim-dark:#90191b; }
+#simulador button { cursor:pointer; }
+#simulador button:focus-visible,#simulador input:focus-visible{outline:3px solid #2563eb;outline-offset:3px}
+.sim-colors,.sim-switch{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+.sim-swatch{width:32px;height:32px;border-radius:100%;background:var(--swatch);border:3px solid white;box-shadow:0 0 0 1px #dbe1e8;transition:transform .2s,box-shadow .2s}
+.sim-swatch:hover{transform:scale(1.1)}.sim-swatch.active{box-shadow:0 0 0 2px var(--sim-accent);transform:scale(1.08)}
+.sim-switch{margin-top:17px;gap:5px;background:#e9edf3;padding:4px;border-radius:14px;width:fit-content;margin-left:auto;margin-right:auto}
+.sim-switch button{padding:9px 11px;font-size:11px;font-weight:800;border-radius:11px;color:#64748b;transition:all .2s}
+.sim-switch button.active{color:var(--sim-dark);background:#fff;box-shadow:0 2px 8px #0f172a18}
+.sim-name-label{font-size:10px;letter-spacing:.04em;font-weight:700;color:#64748b;display:block;margin:13px 0 5px}
+.sim-name{width:min(240px,100%);border:1px solid #d7dee8;border-radius:10px;background:white;text-align:center;font-size:12px;padding:8px;color:#1e293b}
+.sim-device-wrap{width:100%;display:flex;justify-content:center;min-height:475px;align-items:flex-start}
+.sim-phone{width:275px;height:525px;flex-shrink:0;border:9px solid #222e3e;border-radius:39px;box-shadow:0 26px 50px #0f172a25;background:#222e3e;position:relative;overflow:hidden}
+.sim-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);height:18px;width:98px;background:#222e3e;border-radius:0 0 15px 15px;z-index:4}
+.sim-phone-screen{height:100%;overflow-y:auto;scrollbar-width:none;background:#fff8f8;color:#111827}.sim-phone-screen::-webkit-scrollbar{display:none}
+.sim-login{min-height:100%;background:var(--sim-accent);color:#fff;text-align:center;padding:38px 15px 15px;display:flex;flex-direction:column;align-items:center}
+.sim-login .sim-pill{font-size:10px;border:1px solid #ffffff55;background:#ffffff15;border-radius:40px;padding:7px 14px;font-weight:700}
+.sim-login h3{font-size:27px;font-weight:800;letter-spacing:-.04em;margin:21px 0 28px;line-height:1.18}
+.sim-login-panel{width:100%;padding:22px 14px 16px;border:1px solid #ffffff45;background:#00000020;border-radius:23px}
+.sim-login-panel h4{font-size:14px;font-weight:800;margin-bottom:5px}.sim-login-panel p{font-size:10px;color:#ffffffc9;margin-bottom:18px}
+.sim-login-panel input{width:100%;background:#ffffff20;color:#fff;border:1px solid #ffffff18;padding:12px;border-radius:12px;font-size:11px;outline:none;margin-bottom:12px}
+.sim-login-panel input::placeholder{color:#ffffffce}.sim-login-panel button{background:#ffffff;color:var(--sim-dark);border-radius:12px;font-size:12px;font-weight:800;width:100%;padding:12px}
+.sim-login-signature{margin-top:auto;padding-top:30px;font-family:cursive;font-size:18px;font-style:italic}
+.sim-patient-page{padding:11px 11px 62px;min-height:100%;background:color-mix(in srgb,var(--sim-accent) 6%,white)}
+.sim-patient-hero{background:#fff;border-radius:20px;padding:14px;display:flex;gap:10px;box-shadow:0 2px 8px #00000006;margin-bottom:15px}
+.sim-avatar{width:42px;height:42px;flex:none;background:var(--sim-soft);color:var(--sim-dark);border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:17px}
+.sim-small{font-size:9px;color:#667085}.sim-patient-hero h3{font-weight:800;font-size:15px}.sim-patient-hero .sim-by{color:var(--sim-accent);font-weight:700;font-size:10px}
+.sim-patient-hero p{font-size:10px;color:#64748b;margin-top:8px}.sim-patient-hero p strong{color:#111827}
+.sim-progress-card{background:white;border:1px solid #f1e1e1;border-radius:14px;padding:13px;margin-bottom:15px;font-size:10px}
+.sim-progress-card strong{display:block;font-size:11px;margin-bottom:4px}
+.sim-section-title{font-weight:800;font-size:13px;margin:0 0 11px}
+.sim-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.sim-shortcut{height:90px;background:#fff;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:7px 4px;color:#0f172a;font-size:10px;font-weight:700;line-height:1.15;text-align:center;transition:transform .2s}
+.sim-shortcut:hover{transform:translateY(-3px)}.sim-shortcut .sim-glyph{background:var(--sim-soft);border-radius:12px;width:36px;height:36px;display:grid;place-items:center;color:var(--sim-accent);font-size:18px}
+.sim-phonebar{position:absolute;bottom:9px;left:16px;right:16px;border-top:1px solid #e2e8f0;background:#fffc;padding:8px;display:flex;justify-content:space-around;gap:5px;border-radius:11px;backdrop-filter:blur(10px)}
+.sim-phonebar button{font-size:10px;font-weight:700;color:#667085}.sim-phonebar button.active{color:var(--sim-dark)}
+.sim-back{color:var(--sim-dark);font-size:10px;font-weight:800;padding:5px 0 15px}.sim-detail{background:white;border-radius:15px;padding:14px;box-shadow:0 2px 12px #00000008;font-size:11px}
+.sim-detail h3{font-size:16px;font-weight:800;margin-bottom:9px}.sim-detail p{color:#475569;line-height:1.65}.sim-detail-list{margin-top:12px;display:grid;gap:9px}.sim-detail-row{background:#f8fafc;border:1px solid #e2e8f0;padding:10px;border-radius:9px}
+.sim-caption{font-size:10px;color:#64748b;text-align:center;margin-top:13px;max-width:340px;line-height:1.5}
+.sim-desktop{width:100%;max-width:480px;height:525px;background:#eaf6fd;border-radius:17px;box-shadow:0 25px 55px #0f172a22;overflow:hidden;border:1px solid #d8e7f2;text-align:left;font-family:Arial,sans-serif}
+.sim-desktop-top{height:34px;background:#c5eaf5;display:flex;align-items:center;justify-content:space-between;padding:0 11px;font-size:10px;color:#15334d}
+.sim-desktop-body{height:calc(100% - 34px);display:grid;grid-template-columns:132px minmax(0,1fr)}
+.sim-sidebar{background:#103858;color:#e8f4ff;padding:11px 7px;overflow-y:auto;scrollbar-width:thin}
+.sim-sidebar h3{font-size:12px;font-weight:800;line-height:1.25;margin:0 4px 15px}.sim-nav-title{font-size:8px;text-transform:uppercase;color:#a5c0d5;font-weight:800;letter-spacing:.04em;margin:14px 4px 7px}
+.sim-nav-item{display:block;width:100%;text-align:left;padding:7px 6px;border-radius:8px;font-size:9px;font-weight:700;line-height:1.3;color:white}
+.sim-nav-item:hover{background:#ffffff18}.sim-nav-item.active{background:var(--sim-accent);color:white}
+.sim-workspace{padding:14px 11px;overflow-y:auto;min-width:0}.sim-workspace h3{font-size:20px;font-weight:800;margin-bottom:12px;color:#152633}.sim-workspace h4{font-size:11px;font-weight:800}
+.sim-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.sim-stat{background:#fff;padding:12px 9px;border-radius:15px;min-height:75px}.sim-stat strong{font-size:19px;display:block}.sim-stat span{font-size:9px;line-height:1.5}
+.sim-dash-box{background:white;border-radius:14px;padding:12px;margin-top:10px;font-size:10px;line-height:1.6}.sim-dash-box p{color:#667085;margin-top:5px}
+.sim-dash-row{background:#f4f8fb;padding:8px;border-radius:8px;margin-top:7px;font-size:10px}
+@media(max-width:480px){.sim-desktop-body{grid-template-columns:115px minmax(0,1fr)}.sim-desktop{height:500px}.sim-sidebar{padding:8px 5px}.sim-workspace{padding:11px 8px}.sim-stats{grid-template-columns:1fr 1fr}.sim-stat{padding:9px 6px}}
+
+
+/* Detalhamento interativo das interfaces demonstrativas */
+.sim-detail{padding:12px}.sim-detail h3{margin-bottom:5px}.sim-kicker{font-size:9px;font-weight:800;color:var(--sim-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.sim-muted{font-size:9px;color:#718096;line-height:1.5}.sim-metric-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:10px 0}
+.sim-metric{background:var(--sim-soft);padding:8px 3px;border-radius:9px;text-align:center}.sim-metric b{display:block;color:var(--sim-dark);font-size:12px}.sim-metric small{font-size:8px;color:#64748b}
+.sim-panel-card{background:#fff;border:1px solid #e7ebf0;border-radius:12px;padding:10px;margin:8px 0;box-shadow:0 2px 9px #17223806}
+.sim-card-title{font-size:11px;font-weight:800;color:#18283a;margin-bottom:6px}.sim-detail-line{display:flex;align-items:center;justify-content:space-between;gap:6px;border-top:1px solid #eef0f4;padding:6px 0;font-size:9px;color:#455468}
+.sim-detail-line:first-of-type{border-top:0}.sim-tag{border-radius:7px;padding:3px 5px;font-weight:800;background:var(--sim-soft);color:var(--sim-dark);font-size:8px;white-space:nowrap}
+.sim-action{display:inline-flex;align-items:center;justify-content:center;background:var(--sim-accent);color:white!important;padding:8px 10px;border-radius:8px;font-size:9px;font-weight:800;margin-top:7px;cursor:pointer}
+.sim-chip-bar{display:flex;gap:5px;flex-wrap:wrap;margin:9px 0}.sim-chip{background:#edf1f5;border:1px solid #dde5ec;border-radius:8px;padding:5px 7px;font-size:9px;font-weight:700;color:#435166}.sim-chip.selected{background:var(--sim-soft);border-color:var(--sim-accent);color:var(--sim-dark)}
+.sim-progress-track{height:6px;background:#e8eef3;border-radius:8px;overflow:hidden;margin:7px 0}.sim-progress-track>span{display:block;height:100%;background:var(--sim-accent);border-radius:8px}
+.sim-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-top:8px}.sim-day{font-size:9px;text-align:center;padding:6px 1px;border-radius:6px;min-width:0}.sim-day.head{font-weight:800;color:#75859a}.sim-day.marked{background:var(--sim-soft);color:var(--sim-dark);font-weight:800}.sim-day.selected{background:var(--sim-accent);color:white}
+.sim-workspace .sim-panel-card{margin:7px 0}.sim-workspace .sim-detail-line{font-size:9px}.sim-workspace .sim-metric-grid{margin:8px 0}.sim-workspace .sim-metric b{font-size:12px}
+.sim-schedule{border-left:2px solid var(--sim-accent);padding:4px 0 4px 8px;margin:8px 0;font-size:9px}.sim-schedule strong{display:block;font-size:10px;color:#183044}.sim-schedule span{font-size:9px;color:#64748b}
+.sim-prof-input{width:100%;border:1px solid #d9e2eb;border-radius:7px;padding:7px 8px;background:white;font-size:10px;margin-top:5px}
+.sim-toast{margin-top:8px;background:var(--sim-soft);padding:8px;border-radius:9px;color:var(--sim-dark);font-size:9px;font-weight:700}
+
     </style>
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white">
@@ -151,109 +222,40 @@
                     </div>
                 </div>
 
-                <!-- Hero Right Interactive Mockup Customizer -->
-                <div class="lg:col-span-5 flex flex-col items-center">
-                    <div class="text-center mb-4">
-                        <span class="text-xs text-gray-500 uppercase tracking-widest block mb-2">Simulador Interativo</span>
-                        <p class="text-sm text-gray-600">Escolha a cor da sua clínica para ver a mágica:</p>
-                        
-                        <div class="flex justify-center gap-3 mt-3">
-                            <button onclick="changeMockupColor('emerald', '#10b981')" class="w-8 h-8 rounded-full bg-emerald-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
-                            <button onclick="changeMockupColor('indigo', '#6366f1')" class="w-8 h-8 rounded-full bg-indigo-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
-                            <button onclick="changeMockupColor('rose', '#f43f5e')" class="w-8 h-8 rounded-full bg-rose-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
-                            <button onclick="changeMockupColor('amber', '#f59e0b')" class="w-8 h-8 rounded-full bg-amber-500 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
-                            <button onclick="changeMockupColor('slate', '#475569')" class="w-8 h-8 rounded-full bg-slate-600 border-2 border-white focus:border-gray-400 transition-all hover:scale-110 shadow-sm"></button>
+                <!-- Simulador de interfaces reais: paciente e nutricionista -->
+                <div class="lg:col-span-5 flex flex-col items-center w-full" id="simulador">
+                    <div class="text-center mb-4 w-full">
+                        <span class="text-xs text-gray-500 uppercase tracking-widest block mb-2">Simulador interativo</span>
+                        <p class="text-sm text-gray-600 mb-3">Veja como seu aplicativo fica com a sua identidade.</p>
+                        <div class="sim-colors" role="group" aria-label="Escolha a cor da identidade visual">
+                            <button type="button" class="sim-swatch" style="--swatch:#10b981" data-color="#10b981" aria-label="Verde" aria-pressed="false"></button>
+                            <button type="button" class="sim-swatch" style="--swatch:#6366f1" data-color="#6366f1" aria-label="Roxo" aria-pressed="false"></button>
+                            <button type="button" class="sim-swatch active" style="--swatch:#c32124" data-color="#c32124" aria-label="Vermelho" aria-pressed="true"></button>
+                            <button type="button" class="sim-swatch" style="--swatch:#f59e0b" data-color="#f59e0b" aria-label="Laranja" aria-pressed="false"></button>
+                            <button type="button" class="sim-swatch" style="--swatch:#475569" data-color="#475569" aria-label="Cinza azulado" aria-pressed="false"></button>
                         </div>
+                        <div class="sim-switch" role="group" aria-label="Interface exibida">
+                            <button type="button" data-mode="patient" class="active" aria-pressed="true">📱 Área do paciente</button>
+                            <button type="button" data-mode="professional" aria-pressed="false">▦ Painel do nutricionista</button>
+                        </div>
+                        <label class="sim-name-label" for="sim-prof-name">Nome da nutricionista</label>
+                        <input id="sim-prof-name" class="sim-name" maxlength="32" value="Seu nome aqui" aria-label="Nome da nutricionista na demonstração">
                     </div>
-
-                    <!-- Smartphone Mockup Wrapper -->
-                    <div class="relative w-full max-w-[310px] aspect-[9/19] rounded-[42px] border-[10px] border-gray-800 bg-gray-900 shadow-2xl overflow-hidden transition-all duration-300">
-                        <!-- Notch -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-2xl z-30 flex items-center justify-center">
-                            <span class="w-12 h-1 bg-gray-900 rounded-full block"></span>
+                    <div class="sim-device-wrap" id="sim-device-wrap">
+                        <div class="sim-phone" id="sim-phone">
+                            <div class="sim-notch"></div>
+                            <div class="sim-phone-screen" id="sim-phone-screen" aria-live="polite"></div>
                         </div>
-
-                        <!-- Inner Screen -->
-                        <div class="h-full flex flex-col justify-between pt-10 pb-4 px-4 relative z-20">
-                            <!-- Header -->
-                            <div class="flex items-center justify-between border-b border-white/10 pb-3">
-                                <div class="flex items-center gap-1.5">
-                                    <div id="mockup-dot" class="w-6 h-6 rounded-md bg-brand-500 flex items-center justify-center text-[10px] text-white font-bold color-transition">
-                                        DR
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white text-[11px] font-bold leading-none">Dra. Amanda Melo</h4>
-                                        <span class="text-[8px] text-gray-400">Sua Marca no Celular</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Screen Content -->
-                            <div class="flex-1 py-3 flex flex-col justify-start overflow-y-auto space-y-2.5 scrollbar-thin no-scrollbar">
-                                <p class="text-[9px] text-gray-400 font-bold uppercase tracking-wider">Refeições de Hoje</p>
-                                
-                                <div id="mockup-card-1" class="bg-white/5 border-l-4 border-brand-500 p-2 rounded-r-lg color-transition">
-                                    <div class="flex justify-between items-center text-[9px] font-bold text-white">
-                                        <span>🍳 Café da Manhã</span>
-                                        <span class="text-gray-400">08:00</span>
-                                    </div>
-                                </div>
-
-                                <div id="mockup-card-2" class="bg-white/5 border-l-4 border-brand-500 p-2 rounded-r-lg color-transition">
-                                    <div class="flex justify-between items-center text-[9px] font-bold text-white">
-                                        <span>🍛 Almoço Completo</span>
-                                        <span class="text-gray-400">12:30</span>
-                                    </div>
-                                </div>
-
-                                <p class="text-[9px] text-gray-400 font-bold uppercase tracking-wider mt-2">Métricas & Atividades</p>
-
-                                <div class="bg-white/5 rounded-xl p-2 border border-white/5 flex items-center justify-between">
-                                    <div class="flex-1">
-                                        <span class="text-[8px] text-gray-400 block font-semibold">💧 Hidratação diária</span>
-                                        <span class="text-[10px] text-white font-bold block" id="hydration-label">2.2L / 3.0L</span>
-                                    </div>
-                                    <button onclick="addWater()" class="text-[10px] bg-brand-500/20 text-brand-500 px-2 py-1 rounded font-bold">
-                                        +300ml
-                                    </button>
-                                </div>
-
-                                <div class="bg-white/5 rounded-xl p-2 border border-white/5 space-y-1.5">
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[8px] text-gray-300 font-medium">🍽️ Realizou todas refeições hoje?</span>
-                                        <input type="checkbox" id="meals-check" class="accent-brand-500 h-3 w-3 rounded" checked>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[8px] text-gray-300 font-medium">💤 Dormiu bem? (7h+)</span>
-                                        <input type="checkbox" id="sleep-check" class="accent-brand-500 h-3 w-3 rounded" checked>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <span class="text-[8px] text-gray-300 font-medium">🏋️ Atividade Física?</span>
-                                        <input type="checkbox" id="exercise-check" class="accent-brand-500 h-3 w-3 rounded" checked>
-                                    </div>
-                                </div>
-
-                                <button id="mockup-btn" onclick="triggerMockupCheckin()" class="w-full bg-brand-500 text-white font-bold text-[9px] py-2.5 rounded-lg shadow-md color-transition mt-2">
-                                    Confirmar Check-in do Dia
-                                </button>
-                            </div>
-
-                            <!-- Bottom Navbar -->
-                            <div class="border-t border-white/10 pt-2 flex justify-between px-2">
-                                <span class="text-[8px] text-brand-500 font-bold flex flex-col items-center gap-0.5 color-transition">
-                                    <span>🏠</span> Início
-                                </span>
-                                <span class="text-[8px] text-gray-500 flex flex-col items-center gap-0.5">
-                                    <span>🥗</span> Dieta
-                                </span>
-                                <span class="text-[8px] text-gray-500 flex flex-col items-center gap-0.5">
-                                    <span>📈</span> Progresso
-                                </span>
+                        <div class="sim-desktop hidden" id="sim-desktop">
+                            <div class="sim-desktop-top"><span>Nutri <strong class="sim-prof-text">Seu nome aqui</strong></span><span>● ● ●</span></div>
+                            <div class="sim-desktop-body">
+                                <aside class="sim-sidebar" id="sim-sidebar" aria-label="Menu do nutricionista"></aside>
+                                <main class="sim-workspace" id="sim-workspace" aria-live="polite"></main>
                             </div>
                         </div>
                     </div>
+                    <p class="sim-caption" id="sim-caption">Demonstração ilustrativa • Clique em Entrar para explorar o aplicativo.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -586,56 +588,121 @@
 
     <!-- INTERACTIVE JAVASCRIPT LOGIC -->
     <script>
-        let currentWater = 2.2;
-        
-        function changeMockupColor(colorName, hexValue) {
-            const dot = document.getElementById('mockup-dot');
-            const card1 = document.getElementById('mockup-card-1');
-            const card2 = document.getElementById('mockup-card-2');
-            const btn = document.getElementById('mockup-btn');
-            
-            dot.style.backgroundColor = hexValue;
-            card1.style.borderColor = hexValue;
-            card2.style.borderColor = hexValue;
-            btn.style.backgroundColor = hexValue;
-            
-            if (colorName === 'rose' || colorName === 'amber' || colorName === 'emerald') {
-                btn.style.color = '#ffffff'; 
-                dot.style.color = '#ffffff';
+        // Demonstração independente: não realiza login, consultas ou gravação de dados.
+        const simRoot = document.getElementById('simulador');
+        const simPhone = document.getElementById('sim-phone-screen');
+        const simDesktop = document.getElementById('sim-desktop');
+        const simPhoneFrame = document.getElementById('sim-phone');
+        const simName = document.getElementById('sim-prof-name');
+        const simCaption = document.getElementById('sim-caption');
+        let simMode = 'patient';
+        let simPatientPage = 'login';
+        let simProfPage = 'Dashboard';
+        const simSections = [
+            ['DASHBOARD',['Dashboard','Tarefas']],
+            ['GESTÃO E AGENDAMENTOS',['Agenda','Financeiro','Recibos']],
+            ['GESTÃO DE PACIENTES',['Pacientes']],
+            ['ATENDIMENTO NUTRICIONAL',['Anamnese','Necessidades Nutricionais','Plano alimentar','Lista de compras','Orientações','Suplementação','Exames','Evolução','Anotações internas']],
+            ['FERRAMENTAS NUTRICIONAIS',['Banco de alimentos','Ferramentas','Lâminas Nutricionais','NutriLab - Cursos']],
+            ['SISTEMA',['Personalização','Configurações','Atualização sistema']]
+        ];
+        const simShortcuts = [
+            ['Meu plano alimentar','🍴'],['Diário','☑'],['Orientações','▤'],
+            ['Minha evolução','⌁'],['Suplementação','✚'],['Meus exames','♧'],
+            ['Recibos','▣'],['Falar com nutricionista','▢']
+        ];
+        function simEscape(value) { return String(value).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+        function simProfessionalName(){return simEscape(simName.value.trim() || 'Seu nome aqui');}
+        function simSetColor(hex){
+            const n=hex.replace('#','');let r=parseInt(n.slice(0,2),16),g=parseInt(n.slice(2,4),16),b=parseInt(n.slice(4,6),16);
+            simRoot.style.setProperty('--sim-accent',hex);
+            simRoot.style.setProperty('--sim-soft',`rgba(${r},${g},${b},0.13)`);
+            simRoot.style.setProperty('--sim-dark',`rgb(${Math.round(r*.72)},${Math.round(g*.72)},${Math.round(b*.72)})`);
+            simRoot.querySelectorAll('.sim-swatch').forEach(x=>{let active=x.dataset.color===hex;x.classList.toggle('active',active);x.setAttribute('aria-pressed',String(active));});
+        }
+        // Todos os dados abaixo são fictícios e servem exclusivamente à prévia do software.
+        const simMealData = [
+          {name:'Café da manhã',icon:'☀️',time:'07:30',foods:['2 fatias de pão integral','1 ovo mexido','1 banana média','Café sem açúcar'],kcal:365,protein:'19 g',carbs:'48 g',fat:'11 g'},
+          {name:'Almoço',icon:'🍛',time:'12:30',foods:['4 colheres de arroz integral','1 concha de feijão','120 g de frango grelhado','Salada com azeite'],kcal:540,protein:'42 g',carbs:'58 g',fat:'15 g'},
+          {name:'Lanche',icon:'🍎',time:'16:00',foods:['1 iogurte natural','1 porção de morangos','1 colher de aveia'],kcal:225,protein:'12 g',carbs:'30 g',fat:'6 g'},
+          {name:'Jantar',icon:'🌙',time:'19:30',foods:['Omelete com legumes','1 batata-doce média','Salada verde'],kcal:410,protein:'26 g',carbs:'39 g',fat:'16 g'}
+        ];
+        const simExams=[['Hemograma completo','12/09/2026','Disponível'],['Glicemia em jejum','12/09/2026','Disponível'],['Hemoglobina glicada (HbA1c)','12/09/2026','Disponível'],['Colesterol total e frações','28/08/2026','Disponível'],['Triglicerídeos','28/08/2026','Disponível'],['Vitamina D (25-OH)','15/07/2026','A acompanhar'],['Ferritina','15/07/2026','Disponível']];
+        let simSelectedMeal=0,simSelectedExam='Todos',simSelectedDay=14,simToast='';
+        const simCard=(title,body)=>`<div class="sim-panel-card"><div class="sim-card-title">${title}</div>${body}</div>`;
+        const simLine=(label,value)=>`<div class="sim-detail-line"><span>${label}</span><span class="sim-tag">${value}</span></div>`;
+        const simMetrics=(items)=>`<div class="sim-metric-grid">${items.map(([a,b])=>`<div class="sim-metric"><b>${a}</b><small>${b}</small></div>`).join('')}</div>`;
+        const simNotice=()=>simToast?`<div class="sim-toast" role="status">✓ ${simEscape(simToast)}</div>`:'';
+        function simMealDetails(){let m=simMealData[simSelectedMeal];return `<div class="sim-kicker">Plano alimentar demonstrativo</div><h3>🥗 Meu plano alimentar</h3><p class="sim-muted">Exemplo de organização diária. Quantidades e metas são ilustrativas e não constituem prescrição.</p>${simMetrics([['1.540','kcal / dia'],['99 g','Proteínas'],['175 g','Carboidratos']])}<div class="sim-chip-bar">${simMealData.map((a,i)=>`<button class="sim-chip ${i===simSelectedMeal?'selected':''}" data-meal="${i}">${a.icon} ${a.name}</button>`).join('')}</div>${simCard(m.icon+' '+m.name+' · '+m.time,m.foods.map(a=>`<div class="sim-detail-line"><span>✓ ${a}</span></div>`).join('')+simMetrics([[m.kcal+'','kcal'],[m.protein,'Proteínas'],[m.carbs,'Carboidratos']])+simLine('Gorduras',m.fat))}${simCard('📋 Orientações da refeição','<p class="sim-muted">Mastigue com calma, respeite sua fome e mantenha uma rotina de hidratação.</p><button class="sim-action" data-demo="Refeição marcada como visualizada">Marcar como visualizada</button>')}${simNotice()}`;}
+        function simPatientDetail(page){
+          if(page==='Meu plano alimentar')return simMealDetails();
+          if(page==='Meus exames')return `<div class="sim-kicker">Histórico do paciente</div><h3>🧪 Meus exames</h3><p class="sim-muted">Documentos de exemplo para visualizar como o acompanhamento funciona.</p>${simCard('Resultados recentes',simExams.slice(0,5).map(e=>simLine(e[0],e[1])).join(''))}${simCard('🩺 Acompanhamento','<p class="sim-muted">Seu nutricionista pode consultar resultados e acompanhar tendências ao longo das avaliações.</p>')}`;
+          if(page==='Suplementação')return `<div class="sim-kicker">Rotina de suplementos</div><h3>💊 Suplementação</h3><p class="sim-muted">Exemplo fictício de horários e orientações individualizadas.</p>${simCard('🌅 Manhã',simLine('Suplemento A · 1 dose','08:00')+simLine('Situação','Programado'))}${simCard('🌙 Noite',simLine('Suplemento B · 1 dose','20:00')+simLine('Situação','Programado'))}${simCard('Acompanhamento',`<p class="sim-muted">Registre a administração conforme orientação profissional.</p><button class="sim-action" data-demo="Registro demonstrativo atualizado">Registrar dose</button>`)}${simNotice()}`;
+          if(page==='Minha evolução')return `<div class="sim-kicker">Sua trajetória</div><h3>📈 Minha evolução</h3>${simMetrics([['3','Avaliações'],['4','Semanas'],['82%','Aderência ilustrativa']])}${simCard('⚖️ Evolução antropométrica',simLine('Peso na avaliação 1','78,2 kg')+simLine('Peso na avaliação 2','77,5 kg')+simLine('Peso na avaliação 3','76,9 kg'))}${simCard('📏 Medidas e composição corporal',simLine('Circunferência da cintura','87 cm')+simLine('Massa muscular','Acompanhar')+simLine('Gordura corporal','Acompanhar'))}<p class="sim-muted">Dados simulados, sem avaliação clínica real.</p>`;
+          if(page==='Diário')return `<div class="sim-kicker">Check-in diário</div><h3>📓 Diário alimentar</h3>${simCard('Como foi seu dia?',`<div class="sim-detail-line">🍽️ Refeições planejadas <span class="sim-tag">4 de 4</span></div><div class="sim-detail-line">💧 Água consumida <span class="sim-tag">1,8 L</span></div><div class="sim-detail-line">🚶 Atividade física <span class="sim-tag">30 min</span></div><div class="sim-detail-line">😴 Qualidade do sono <span class="sim-tag">Boa</span></div><button class="sim-action" data-demo="Check-in demonstrativo registrado">Salvar meu check-in</button>`)}${simCard('Registro alimentar','<p class="sim-muted">Adicione observações sobre refeições, fome, saciedade e hábitos diários.</p>')}${simNotice()}`;
+          if(page==='Orientações')return `<h3>📋 Orientações</h3>${simCard('🥦 Organize suas refeições','<p class="sim-muted">Planeje horários e mantenha alimentos variados ao longo do dia.</p>')}${simCard('💧 Hidratação','<p class="sim-muted">Consulte a meta de hidratação definida no acompanhamento individual.</p>')}${simCard('🧘 Alimentação consciente','<p class="sim-muted">Coma com atenção, percebendo sinais de fome e saciedade.</p>')}`;
+          if(page==='Recibos')return `<h3>🧾 Meus recibos</h3>${simCard('Histórico demonstrativo',simLine('Consulta nutricional · setembro','Disponível')+simLine('Consulta nutricional · agosto','Disponível')+`<button class="sim-action" data-demo="Prévia demonstrativa do recibo selecionada">Visualizar recibo</button>`)}${simNotice()}`;
+          return `<h3>💬 Falar com nutricionista</h3>${simCard('Mensagens',`<div class="sim-detail-line"><span>Nutricionista</span><span>Olá! Como foi sua semana?</span></div><div class="sim-detail-line"><span>Paciente</span><span>Estou seguindo o plano!</span></div><button class="sim-action" data-demo="Mensagem demonstrativa preparada">Responder mensagem</button>`)}${simNotice()}`;
+        }
+        function simRenderPatient(){
+            const name=simProfessionalName();
+            if(simPatientPage==='login'){
+                simPhone.innerHTML=`<div class="sim-login"><span class="sim-pill">✦ Nutricionista</span><h3>${name}</h3><div class="sim-login-panel"><h4>Acesse sua estratégia nutricional</h4><p>Seu acompanhamento, sempre por perto.</p><input type="email" aria-label="E-mail demonstrativo" placeholder="@  E-mail ou número de contato"><button type="button" data-patient="home">Entrar</button></div><div class="sim-login-signature">${name}</div></div>`;
+                simCaption.textContent='Demonstração ilustrativa • Clique em Entrar para explorar a área do paciente.';
+            } else if(simPatientPage==='home'){
+                simPhone.innerHTML=`<div class="sim-patient-page"><div class="sim-patient-hero"><div class="sim-avatar">T</div><div><h3>Olá, teste!</h3><span class="sim-by">✦ Nutricionista<br>${name}</span><p><strong>Mensagem do dia:</strong><br><em>“Confie no processo.”</em></p></div></div><div class="sim-progress-card"><strong>Acompanhamento de hoje</strong><span class="sim-small">Seu dia em um só lugar.</span><div class="sim-progress-track"><span style="width:68%"></span></div><span class="sim-small">Progresso demonstrativo de 68%</span></div><h4 class="sim-section-title">Seus atalhos</h4><div class="sim-shortcuts">${simShortcuts.map(([label,icon])=>`<button type="button" class="sim-shortcut" data-patient="${simEscape(label)}"><span class="sim-glyph">${icon}</span>${label}</button>`).join('')}</div></div><div class="sim-phonebar"><button type="button" class="active" data-patient="home">⌂ Início</button><button type="button" data-patient="Meu plano alimentar">◫ Plano</button><button type="button" data-patient="Minha evolução">⌁ Evolução</button></div>`;
+                simCaption.textContent='Toque nos atalhos para explorar exemplos de refeições, exames, suplementos e evolução.';
             } else {
-                btn.style.color = '#ffffff'; 
-                dot.style.color = '#ffffff';
+                simPhone.innerHTML=`<div class="sim-patient-page"><button type="button" class="sim-back" data-patient="home">← Voltar ao início</button><div class="sim-detail">${simPatientDetail(simPatientPage)}</div></div><div class="sim-phonebar"><button type="button" data-patient="home">⌂ Início</button><button type="button" data-patient="Meu plano alimentar">◫ Plano</button><button type="button" data-patient="Minha evolução">⌁ Evolução</button></div>`;
+                simCaption.textContent='Conteúdo ilustrativo e interativo: '+simPatientPage+'.';
             }
         }
-
-        function addWater() {
-            currentWater = parseFloat((currentWater + 0.3).toFixed(1));
-            if (currentWater > 5.0) currentWater = 1.0; 
-            document.getElementById('hydration-label').innerText = `${currentWater}L / 3.0L`;
+        function simCalendar(){let out='<div class="sim-calendar">'+['D','S','T','Q','Q','S','S'].map(d=>`<span class="sim-day head">${d}</span>`).join('');for(let i=0;i<4;i++)out+='<span></span>';for(let d=1;d<=31;d++)out+=`<button class="sim-day ${[8,14,21].includes(d)?'marked':''} ${d===simSelectedDay?'selected':''}" data-calday="${d}" aria-label="Selecionar dia ${d}">${d}</button>`;return out+'</div>';}
+        function simProfessionalDetail(page){
+          if(page==='Agenda')return `<div class="sim-kicker">Organização de consultas</div>${simCard('📆 Outubro de 2026',simCalendar())}${simCard('Dia '+simSelectedDay+' · Agendamentos',simSelectedDay===14?`<div class="sim-schedule"><strong>08:00 · Consulta inicial</strong><span>Paciente Ana Costa · Confirmada</span></div><div class="sim-schedule"><strong>14:30 · Retorno</strong><span>Paciente Bruno Lima · Agendado</span></div>`:`<p class="sim-muted">${[8,21].includes(simSelectedDay)?'09:00 · Retorno nutricional (exemplo)':'Nenhuma consulta demonstrativa neste dia.'}</p>`+`<button class="sim-action" data-demo="Janela de novo agendamento (demonstração)">+ Novo agendamento</button>`)}${simNotice()}`;
+          if(page==='Exames')return `<div class="sim-kicker">Resultados laboratoriais</div>${simCard('🧪 Exames do paciente',`<p class="sim-muted">Lista ilustrativa para acompanhamento clínico.</p><div class="sim-chip-bar">${['Todos','Disponível','A acompanhar'].map(a=>`<button class="sim-chip ${a===simSelectedExam?'selected':''}" data-exam-filter="${a}">${a}</button>`).join('')}</div>${simExams.filter(e=>simSelectedExam==='Todos'||e[2]===simSelectedExam).map(e=>`<div class="sim-detail-line"><span><b>${e[0]}</b><br><small>${e[1]}</small></span><span class="sim-tag">${e[2]}</span></div>`).join('')}`)}${simCard('📊 Evolução dos resultados','<p class="sim-muted">Compare resultados ao longo das coletas e acompanhe os exames solicitados.</p><button class="sim-action" data-demo="Solicitação demonstrativa criada">+ Incluir exame</button>')}${simNotice()}`;
+          if(page==='Plano alimentar')return `<div class="sim-kicker">Prescrição nutricional</div>${simCard('🥗 Plano alimentar · Paciente exemplo',`<p class="sim-muted">Distribuição nutricional de exemplo, sem prescrição real.</p>${simMetrics([['1.540','kcal'],['99 g','Proteínas'],['175 g','Carboidratos']])}<div class="sim-progress-track"><span style="width:64%"></span></div><p class="sim-muted">Planejamento diário organizado por refeições.</p>`)}${simMealData.map(m=>simCard(`${m.icon} ${m.name} · ${m.time}`,m.foods.slice(0,3).map(a=>`<div class="sim-detail-line">${a}</div>`).join('')+simLine('Energia estimada',m.kcal+' kcal'))).join('')}<button class="sim-action" data-demo="Editor de refeições (demonstração)">+ Adicionar refeição</button>${simNotice()}`;
+          if(page==='Suplementação')return `${simCard('💊 Protocolos e horários','<p class="sim-muted">Controle de prescrições, período de utilização e acompanhamento.</p>'+simLine('Suplemento A · 1 dose','08:00')+simLine('Suplemento B · 1 dose','20:00')+simLine('Início do protocolo','01/10/2026')+simLine('Reavaliação','30/10/2026'))}${simCard('Acompanhamento','<p class="sim-muted">Consulte a adesão e ajuste orientações individualizadas.</p><button class="sim-action" data-demo="Novo suplemento (demonstração)">+ Prescrever suplemento</button>')}${simNotice()}`;
+          if(page==='Evolução')return `${simCard('📈 Resumo de evolução',simMetrics([['3','Avaliações'],['4 sem.','Intervalo'],['76,9','Peso (kg)']]))}${simCard('Histórico de medidas',simLine('Peso inicial','78,2 kg')+simLine('Peso atual','76,9 kg')+simLine('Cintura','87 cm')+simLine('Composição corporal','BIA / dobras'))}${simCard('Gráficos disponíveis','<p class="sim-muted">Peso, IMC, circunferências, composição corporal e indicadores nutricionais.</p>')}`;
+          if(page==='Anamnese')return `${simCard('📝 Anamnese nutricional',simLine('Identificação','Preenchida')+simLine('Histórico clínico','Em revisão')+simLine('Hábitos alimentares','Preenchidos')+simLine('Sono, rotina e atividade física','Preenchidos'))}${simCard('Questionário','<p class="sim-muted">Dados pessoais, objetivos, rotina de refeições, preferências, alergias e restrições.</p><button class="sim-action" data-demo="Anamnese aberta para edição (demonstração)">Editar anamnese</button>')}${simNotice()}`;
+          if(page==='Pacientes')return `${simCard('👥 Pacientes cadastrados','<p class="sim-muted">15 pacientes · 2 acompanhamentos hoje</p>'+[['Ana Costa','Retorno em 14/10'],['Bruno Lima','Consulta em 14/10'],['Carla Souza','Plano atualizado']].map(a=>simLine(...a)).join('')+`<button class="sim-action" data-demo="Cadastro de paciente (demonstração)">+ Novo paciente</button>`)}${simNotice()}`;
+          if(page==='Necessidades Nutricionais')return `${simCard('🧮 Cálculo nutricional',simLine('Metabolismo basal','Estimativa')+simLine('Gasto energético total','Estimativa')+simLine('Meta energética','Individualizar'))}${simCard('Distribuição de macronutrientes',simMetrics([['25%','Proteínas'],['45%','Carboidratos'],['30%','Gorduras']])+'<p class="sim-muted">Percentuais meramente demonstrativos.</p>')}`;
+          if(page==='Financeiro')return `${simCard('💳 Resumo financeiro',simMetrics([['R$ 1.200','Recebido'],['R$ 300','Pendente'],['5','Lançamentos']]))}${simCard('Movimentações',simLine('Consulta · Ana Costa','R$ 200')+simLine('Retorno · Bruno Lima','R$ 150')+simLine('Consulta · Carla Souza','R$ 200'))}`;
+          if(page==='Tarefas')return `${simCard('✅ Pendências do dia',simLine('Revisar diário alimentar','Pendente')+simLine('Enviar orientação','Em andamento')+simLine('Conferir exames','Pendente'))}`;
+          if(page==='Recibos')return `${simCard('🧾 Recibos emitidos',simLine('Recibo 001 · consulta','Disponível')+simLine('Recibo 002 · retorno','Disponível'))}`;
+          if(page==='Lista de compras')return `${simCard('🛒 Lista de compras gerada',simLine('Frutas','Banana, maçã, morango')+simLine('Hortaliças','Alface, tomate, cenoura')+simLine('Proteínas','Ovos, frango, iogurte')+simLine('Cereais','Arroz, aveia, pão integral'))}`;
+          if(page==='Orientações')return `${simCard('📚 Orientações para pacientes',simLine('Hidratação','Material disponível')+simLine('Planejamento de refeições','Material disponível')+simLine('Alimentação consciente','Material disponível'))}`;
+          if(page==='Anotações internas')return `${simCard('🗒️ Prontuário interno','<p class="sim-muted">Registros privados do nutricionista, acompanhamento e observações de consulta.</p>'+simLine('Consulta inicial','Concluída')+simLine('Próximo retorno','A confirmar'))}`;
+          if(page==='Banco de alimentos')return `${simCard('🍽️ Banco de alimentos',simLine('Banana prata · 100 g','89 kcal')+simLine('Aveia em flocos · 100 g','389 kcal')+simLine('Ovo cozido · 100 g','155 kcal')+'<p class="sim-muted">Valores aproximados utilizados apenas como exemplo.</p>')}`;
+          if(page==='Ferramentas')return `${simCard('🧰 Ferramentas nutricionais',simLine('Calculadora de IMC','Abrir')+simLine('Relação cintura-estatura','Abrir')+simLine('Necessidades energéticas','Abrir')+simLine('Conversão de medidas','Abrir'))}`;
+          if(page==='Lâminas Nutricionais')return `${simCard('🎨 Biblioteca de lâminas',simLine('🥑 Gorduras saudáveis','Material educativo')+simLine('🥦 Fibras alimentares','Material educativo')+simLine('🧂 Temperos naturais','Material educativo')+simLine('🧘 Comer com atenção','Material educativo'))}`;
+          if(page==='NutriLab - Cursos')return `${simCard('🎓 NutriLab · Cursos',simLine('Planejamento alimentar','Aulas')+simLine('Avaliação nutricional','Aulas')+simLine('Gestão do consultório','Aulas'))}`;
+          if(page==='Personalização')return `${simCard('🎨 Identidade da sua marca',`<p class="sim-muted">O nome e a cor selecionados no topo também aparecem nas interfaces.</p>${simLine('Nome profissional',simProfessionalName())}${simLine('Tema','Cor personalizada')}`)}`;
+          if(page==='Configurações')return `${simCard('⚙️ Preferências',simLine('Perfil profissional','Personalizar')+simLine('Agenda e horários','Configurar')+simLine('Notificações','Configurar'))}`;
+          return `${simCard('🔄 Atualização do sistema','<p class="sim-muted">Área demonstrativa para informações de versão e melhorias disponíveis.</p>')}`;
         }
-
-        function triggerMockupCheckin() {
-            const isExerciseChecked = document.getElementById('exercise-check').checked;
-            const isSleepChecked = document.getElementById('sleep-check').checked;
-            const isMealsChecked = document.getElementById('meals-check').checked;
-            
-            let message = "Check-in enviado com sucesso!";
-            if (isExerciseChecked && isSleepChecked && isMealsChecked) {
-                message = "🎉 Perfeito! Todas as metas batidas!";
-            } else {
-                message = "👍 Registro diário salvo com sucesso!";
-            }
-            
-            const btn = document.getElementById('mockup-btn');
-            const originalText = btn.innerText;
-            btn.innerText = message;
-            btn.style.opacity = '0.9';
-            
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.opacity = '1';
-            }, 3000);
+        function simRenderProfessional(){
+            document.querySelectorAll('.sim-prof-text').forEach(el=>el.textContent=simName.value.trim()||'Seu nome aqui');
+            document.getElementById('sim-sidebar').innerHTML=`<h3>Nutri ${simProfessionalName()}</h3>${simSections.map(([category,items])=>`<div class="sim-nav-title">${category}</div>${items.map(item=>`<button type="button" class="sim-nav-item ${simProfPage===item?'active':''}" data-prof="${simEscape(item)}">${simEscape(item)}</button>`).join('')}`).join('')}`;
+            const work=document.getElementById('sim-workspace');
+            if(simProfPage==='Dashboard'){
+                work.innerHTML=`<h3>Dashboard</h3><div class="sim-stats"><div class="sim-stat"><strong>15</strong><span>👥 Pacientes</span></div><div class="sim-stat"><strong>2</strong><span>📅 Consultas agendadas</span></div><div class="sim-stat"><strong style="font-size:15px">R$ 1.200</strong><span>Controle financeiro</span></div><div class="sim-stat"><strong>3</strong><span>Atividades pendentes</span></div></div>${simCard('🎂 Aniversariantes do mês',simLine('Paciente exemplo','Dia 8')+simLine('Paciente demonstração','Dia 21'))}${simCard('📆 Próximas consultas',`<div class="sim-schedule"><strong>08:00 · Ana Costa</strong><span>Consulta inicial · Confirmada</span></div><div class="sim-schedule"><strong>14:30 · Bruno Lima</strong><span>Retorno nutricional · Agendado</span></div><button class="sim-action" data-prof="Agenda">Ver agenda</button>`)}${simCard('📋 Pendências',simLine('Diários para revisar','2')+simLine('Exames para conferir','1'))}`;
+            } else work.innerHTML=`<h3>${simEscape(simProfPage)}</h3>${simProfessionalDetail(simProfPage)}`;
+            simCaption.textContent='Explore o menu: cada módulo mostra uma demonstração detalhada com dados fictícios.';
         }
+        function simRender(){if(simMode==='patient')simRenderPatient();else simRenderProfessional();}
+        simRoot.addEventListener('click',event=>{
+            const swatch=event.target.closest('[data-color]');if(swatch){simSetColor(swatch.dataset.color);return;}
+            const mode=event.target.closest('[data-mode]');if(mode){simMode=mode.dataset.mode;simPhoneFrame.classList.toggle('hidden',simMode!=='patient');simDesktop.classList.toggle('hidden',simMode!=='professional');simRoot.querySelectorAll('[data-mode]').forEach(x=>{x.classList.toggle('active',x===mode);x.setAttribute('aria-pressed',String(x===mode));});simRender();return;}
+            const meal=event.target.closest('[data-meal]');if(meal){simSelectedMeal=Number(meal.dataset.meal);simToast='';simRenderPatient();return;}
+            const day=event.target.closest('[data-calday]');if(day){simSelectedDay=Number(day.dataset.calday);simToast='';simRenderProfessional();return;}
+            const filter=event.target.closest('[data-exam-filter]');if(filter){simSelectedExam=filter.dataset.examFilter;simToast='';simRenderProfessional();return;}
+            const demo=event.target.closest('[data-demo]');if(demo){simToast=demo.dataset.demo;simRender();return;}
+            const patient=event.target.closest('[data-patient]');if(patient){simPatientPage=patient.dataset.patient;simToast='';simRenderPatient();return;}
+            const professional=event.target.closest('[data-prof]');if(professional){simProfPage=professional.dataset.prof;simToast='';simRenderProfessional();}
+        });
+        simName.addEventListener('input',simRender);
+        simSetColor('#c32124');simRender();
 
         function toggleFaq(index) {
             const ans = document.getElementById(`faq-ans-${index}`);

@@ -328,20 +328,20 @@
                             
                             <!-- Apps ficticios -->
                             <div class="grid grid-cols-4 gap-4 p-6 pt-12 relative z-10">
-                                <div class="w-10 h-10 bg-blue-500 rounded-xl"></div>
-                                <div class="w-10 h-10 bg-green-500 rounded-xl"></div>
-                                <div class="w-10 h-10 bg-red-500 rounded-xl"></div>
-                                <div class="w-10 h-10 bg-yellow-400 rounded-xl"></div>
-                                <div class="w-10 h-10 bg-purple-500 rounded-xl"></div>
-                                <div class="w-10 h-10 bg-pink-500 rounded-xl"></div>
+                                <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center shadow-sm"><span class="text-white text-lg">💬</span></div>
+                                <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center shadow-sm"><span class="text-white text-lg">▶️</span></div>
+                                <div class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 rounded-xl flex items-center justify-center shadow-sm"><span class="text-white text-lg">📷</span></div>
+                                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-sm"><span class="text-white text-lg">🏦</span></div>
+                                <div class="w-10 h-10 bg-blue-400 rounded-xl flex items-center justify-center shadow-sm"><span class="text-white text-lg">☀️</span></div>
+                                <div class="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center shadow-sm"><span class="text-white text-lg">✉️</span></div>
                             </div>
                             
                             <!-- O PWA App instalado animação -->
-                            <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 flex flex-col items-center pwa-pulse z-20">
-                                <div class="w-14 h-14 bg-brand-500 rounded-2xl shadow-lg flex items-center justify-center border-2 border-white">
+                            <div class="absolute bottom-40 left-1/2 transform -translate-x-1/2 flex flex-col items-center pwa-pulse z-20 w-full px-4">
+                                <div class="w-14 h-14 bg-brand-500 rounded-2xl shadow-lg flex items-center justify-center border-2 border-white mx-auto">
                                     <span class="text-white font-black text-xl">N</span>
                                 </div>
-                                <span class="text-[10px] font-bold text-gray-800 mt-2 bg-white/70 px-2 py-0.5 rounded-full backdrop-blur-sm">Nutri (Seu Nome)</span>
+                                <span id="pwa-app-name" class="text-[10px] font-bold text-gray-800 mt-2 bg-white/70 px-2 py-0.5 rounded-full backdrop-blur-sm shadow-sm whitespace-nowrap overflow-hidden text-ellipsis max-w-full text-center">Nutri (Seu Nome)</span>
                             </div>
                             
                             <!-- Botão Flutuante de Adicionar -->
@@ -367,8 +367,8 @@
 
     <!-- NEW SECTION: NUTRILAB -->
     <section id="nutrilab" class="py-20 md:py-28 bg-[#f8f9fa] border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
                 <div class="inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-700 font-bold text-xs mb-4 uppercase tracking-wider">
                     📚 Área Exclusiva
                 </div>
@@ -376,55 +376,55 @@
                     NutriLab: Conhecimento que transforma sua prática
                 </h2>
                 <p class="text-sm sm:text-base text-gray-600 mt-4">
-                    Dentro do seu painel profissional, você tem acesso ao <strong>NutriLab</strong>. Uma área repleta de cursos rápidos, aulas de interpretação de exames, obesidade, prescrição baseada em evidências e muito mais!
+                    Dentro do seu painel profissional, você tem acesso ao <strong>NutriLab</strong>. Um portal com <strong>dezenas de minicursos e aulas práticas exclusivas</strong> para você, nutricionista, se atualizar constantemente.
                 </p>
             </div>
 
-            <!-- NutriLab Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <div class="h-32 bg-gray-200 relative">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-gray-800 to-gray-600 flex items-center justify-center text-white text-4xl opacity-80">📊</div>
-                        <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">2 aulas</div>
+            <!-- NutriLab Compact List -->
+            <div class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-sm">
+                <h3 class="text-sm font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3">Alguns dos minicursos disponíveis:</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Item 1 -->
+                    <div class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-xl transition-colors border border-transparent hover:border-gray-100">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0 text-2xl">🧮</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm leading-tight">Cálculo de Necessidades Nutricionais</h4>
+                            <p class="text-xs text-gray-500 mt-1">Aprenda o passo a passo para calcular GET e TMB de forma objetiva.</p>
+                        </div>
                     </div>
-                    <div class="p-5">
-                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Prática baseada em evidências</span>
-                        <h4 class="font-bold text-gray-900 text-sm mb-2 leading-tight">Interpretação de Revisões Sistemáticas</h4>
-                        <p class="text-xs text-gray-600 line-clamp-3">Aprenda a interpretar e compreender como aplicar as evidências científicas na prática nutricional.</p>
+                    <!-- Item 2 -->
+                    <div class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-xl transition-colors border border-transparent hover:border-gray-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center shrink-0 text-2xl">📈</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm leading-tight">Dados Oficiais de Nutrição no Brasil</h4>
+                            <p class="text-xs text-gray-500 mt-1">Como utilizar os painéis do Governo Federal para embasar sua clínica.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-xl transition-colors border border-transparent hover:border-gray-100">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center shrink-0 text-2xl">⚖️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm leading-tight">Obesidade Clínica e Pré-Clínica</h4>
+                            <p class="text-xs text-gray-500 mt-1">Entenda a nova classificação e suas implicações práticas para a avaliação.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="flex items-center gap-4 p-3 hover:bg-gray-50 rounded-xl transition-colors border border-transparent hover:border-gray-100">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center shrink-0 text-2xl">🏃‍♂️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm leading-tight">Avaliação do Gasto Energético</h4>
+                            <p class="text-xs text-gray-500 mt-1">Conheça métodos objetivos e subjetivos aplicados ao esporte.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <div class="h-32 bg-emerald-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-white text-4xl opacity-80">📈</div>
-                        <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">3 aulas</div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Epidemiologia e dados</span>
-                        <h4 class="font-bold text-gray-900 text-sm mb-2 leading-tight">Como Consultar Dados Oficiais no Brasil</h4>
-                        <p class="text-xs text-gray-600 line-clamp-3">Encontre e interprete dados do Governo Federal sobre alimentação e saúde para basear sua conduta.</p>
-                    </div>
+                <div class="mt-4 pt-4 border-t border-gray-100 text-center">
+                    <span class="text-xs text-brand-600 font-bold">E dezenas de outros conteúdos rápidos liberados sem custos adicionais!</span>
                 </div>
-                <!-- Card 3 -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <div class="h-32 bg-gray-800 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-white text-4xl opacity-80">⚖️</div>
-                        <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">2 aulas</div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Obesidade e Saúde</span>
-                        <h4 class="font-bold text-gray-900 text-sm mb-2 leading-tight">Obesidade Clínica e Pré-Clínica: Perspectiva</h4>
-                        <p class="text-xs text-gray-600 line-clamp-3">Entenda a nova classificação da obesidade e suas implicações práticas para a avaliação do paciente.</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                    <div class="h-32 bg-blue-600 relative">
-                        <div class="absolute inset-0 flex items-center justify-center text-white text-4xl opacity-80">🏃‍♂️</div>
-                        <div class="absolute top-2 right-2 bg-black/70 text-white text-[10px] font-bold px-2 py-1 rounded">3 aulas</div>
-                    </div>
-                    <div class="p-5">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: QUER TESTAR AGORA? -->
                         <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block mb-1">Atividade Física</span>
                         <h4 class="font-bold text-gray-900 text-sm mb-2 leading-tight">Métodos para Avaliar o Gasto Energético</h4>
                         <p class="text-xs text-gray-600 line-clamp-3">Conheça métodos objetivos e subjetivos de avaliação do gasto energético aplicados ao esporte e clínica.</p>
@@ -461,51 +461,51 @@
                 <p class="text-sm text-gray-600 mt-2">Comparamos a nossa proposta com as tradicionais assinaturas do mercado.</p>
             </div>
 
-            <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm scrollbar-thin">
-                <table class="w-full text-left border-collapse min-w-[600px]">
+            <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="border-b border-gray-200 bg-gray-50">
-                            <th class="p-6 text-sm font-bold text-gray-900">Benefícios e Recursos</th>
-                            <th class="p-6 text-sm font-bold text-brand-600 bg-brand-50">NutriSeuSoftware</th>
-                            <th class="p-6 text-sm font-bold text-gray-700">Assinaturas do Mercado</th>
+                            <th class="p-3 md:p-6 text-[10px] md:text-sm font-bold text-gray-900">Benefícios e Recursos</th>
+                            <th class="p-3 md:p-6 text-[10px] md:text-sm font-bold text-brand-600 bg-brand-50 border-x border-brand-100">NutriSeuSoftware</th>
+                            <th class="p-3 md:p-6 text-[10px] md:text-sm font-bold text-gray-700">Assinaturas do Mercado</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-200 text-sm">
+                    <tbody class="divide-y divide-gray-200 text-[10px] md:text-sm">
                         <tr>
-                            <td class="p-6 text-gray-700">Custo Mensal Recorrente</td>
-                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">❌ R$ 0,00 (Sem mensalidades)</td>
-                            <td class="p-6 text-red-600">⚠️ R$ 90 a R$ 150 / mês</td>
+                            <td class="p-3 md:p-6 text-gray-700">Custo Mensal</td>
+                            <td class="p-3 md:p-6 text-brand-600 font-semibold bg-brand-50 border-x border-brand-100">❌ Sem mensalidades</td>
+                            <td class="p-3 md:p-6 text-red-600">⚠️ R$ 90 a R$ 150 / mês</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-700">Marca Personalizada (Sua Identidade)</td>
-                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Incluso (Nome e cores de sua preferência)</td>
-                            <td class="p-6 text-gray-500">❌ Logo e nome genérico do sistema deles</td>
+                            <td class="p-3 md:p-6 text-gray-700">Marca Personalizada</td>
+                            <td class="p-3 md:p-6 text-brand-600 font-semibold bg-brand-50 border-x border-brand-100">✔ Nome e cores suas</td>
+                            <td class="p-3 md:p-6 text-gray-500">❌ Logo genérico</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-700">Domínio Próprio</td>
-                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Incluso (Adicione seu domínio)</td>
-                            <td class="p-6 text-gray-500">❌ Endereço com marca da empresa de assinatura</td>
+                            <td class="p-3 md:p-6 text-gray-700">Domínio Próprio</td>
+                            <td class="p-3 md:p-6 text-brand-600 font-semibold bg-brand-50 border-x border-brand-100">✔ Incluso</td>
+                            <td class="p-3 md:p-6 text-gray-500">❌ Sem domínio próprio</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-700">Personalização de Cores Completa</td>
-                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Sim (Adaptado exatamente ao seu estilo)</td>
-                            <td class="p-6 text-gray-500">❌ Estilos e tons engessados padrão</td>
+                            <td class="p-3 md:p-6 text-gray-700">Personalização de Cores</td>
+                            <td class="p-3 md:p-6 text-brand-600 font-semibold bg-brand-50 border-x border-brand-100">✔ Adaptado ao seu estilo</td>
+                            <td class="p-3 md:p-6 text-gray-500">❌ Estilos engessados</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-700">Fidelização a Longo Prazo</td>
-                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">✔ Extrema (Seu ecossistema único)</td>
-                            <td class="p-6 text-gray-500">⚠️ Média (O paciente muda com facilidade)</td>
+                            <td class="p-3 md:p-6 text-gray-700">Fidelização a Longo Prazo</td>
+                            <td class="p-3 md:p-6 text-brand-600 font-semibold bg-brand-50 border-x border-brand-100">✔ Extrema</td>
+                            <td class="p-3 md:p-6 text-gray-500">⚠️ Média</td>
                         </tr>
                         <tr>
-                            <td class="p-6 text-gray-700">Retorno sobre o Investimento</td>
-                            <td class="p-6 text-brand-600 font-semibold bg-brand-50">⚡ Rápido (Seu app próprio por valor único)</td>
-                            <td class="p-6 text-gray-500">❌ Custo infinito acumulado ao longo dos anos</td>
+                            <td class="p-3 md:p-6 text-gray-700">Retorno do Investimento</td>
+                            <td class="p-3 md:p-6 text-brand-600 font-semibold bg-brand-50 border-x border-brand-100">⚡ Rápido (Pagamento Único)</td>
+                            <td class="p-3 md:p-6 text-gray-500">❌ Custo infinito acumulado</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <p class="text-xs text-gray-500 text-center mt-4">
+            <p class="text-xs text-gray-500 text-center mt-4 px-4">
                 * Os dados de mercado correspondem à média cobrada pelas grandes empresas de softwares de nutrição no Brasil.
             </p>
 
@@ -829,7 +829,16 @@
             const patient=event.target.closest('[data-patient]');if(patient){simPatientPage=patient.dataset.patient;simToast='';simRenderPatient();return;}
             const professional=event.target.closest('[data-prof]');if(professional){simProfPage=professional.dataset.prof;simToast='';simRenderProfessional();}
         });
-        simName.addEventListener('input',simRender);
+        
+        simName.addEventListener('input', function() {
+            simRender();
+            const pwaNameEl = document.getElementById('pwa-app-name');
+            if (pwaNameEl) {
+                const val = simName.value.trim();
+                pwaNameEl.textContent = val ? 'Nutri ' + val : 'Nutri (Seu Nome)';
+            }
+        });
+        
         simSetColor('#c32124');simRender();
 
         function toggleFaq(index) {
